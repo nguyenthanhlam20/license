@@ -1,0 +1,114 @@
+﻿@using ViewModels.Accounts
+@using WebClient.Helpers
+@using Core.Enums;
+
+@model AccountVM
+
+@{
+    UserInfo userInfo = SessionHelper.GetObject<UserInfo>(Context.Session, "UserInfo");
+    Role role = Role.Student;
+    if (userInfo != null)
+    {
+        role = (Role)userInfo.RoleNumber;
+
+    }
+}
+
+<div class="pagetitle @(role == Role.Student ? "pt-5 mb-3" : "") ">
+    <h1>Chỉnh sửa thông tin cá nhân</h1>
+</div><!-- End Page Title -->
+<div class="@(role == Role.Student ? "container" : "") mb-3">
+    <div class="row profile">
+        <div id="toggle-sidebar-target" class="col-sm-12 col-md-6 col-lg-6 m-auto">
+            <div class="card p-3 profile-card">
+                <form asp-area="Shared" asp-controller="Profile" asp-action="Update" enctype="multipart/form-data">
+                    @Html.AntiForgeryToken()
+                    <div class="row mb-2 center">
+                        <div class="avatar">
+                            <input asp-for="AvatarUrl" type="hidden">
+                            @if (String.IsNullOrEmpty(Model?.AvatarUrl))
+                            {
+                                <img id="avatar-preview" src="/assets/images/default-img.png" alt="Avatar" class="rounded-circle img-fluid">
+
+                            }
+                            else
+                            {
+                                <img onerror="console.log('error loading image');" id="avatar-preview" src="@Model.AvatarUrl" alt="Avatar" class="rounded-circle img-fluid">
+                            }
+                            <input onchange="previewAvatarImage(this, 'avatar-preview')" id="choose-avatar-file" type="file" class="form-control" accept=".jpg, .jpeg, .png, .gif" hidden name="avatarFile" />
+
+                            <button type="button" onclick="onChooseFile('choose-avatar-file')" class="btn-camera">
+                                <i class="bi bi-camera-fill"></i>
+                            </button>
+                        </div>
+
+                    </div>
+                    <div class="row mb-2">
+                        <label class="col-sm-12">Email<span class="ms-1 text-red">*</span></label>
+                        <div class="col-sm-12">
+                            <input asp-for="Email" type="hidden">
+                            <input disabled asp-for="Email" type="text" class="form-control" placeholder="Nhập địa chỉ email">
+                        </div>
+                    </div>
+                    <div class="row mb-2">
+                        <label class="col-sm-12">Tên đầy đủ<span class="ms-1 text-red">*</span></label>
+                        <div class="col-sm-12">
+
+                            <input asp-for="Fullname" type="text" class="form-control" placeholder="Nhập tên đầy đủ">
+                            <span asp-validation-for="Fullname" class="text-danger"></span>
+
+                        </div>
+                    </div>
+                  
+
+                    <div class="row">
+                        <div class="col-sm-12">
+                            @if (role == Role.Student)
+                            {
+                                <a asp-area="Student" asp-controller="StudentProfile" asp-action="Events" class="btn btn-secondary me-1">
+                                    <i class="bi bi-arrow-left me-1"></i>
+                                    <span>Trở về</span>
+                                </a>
+                            }
+                            else
+                            {
+                                <a asp-controller="Profile" asp-action="Index" class="btn btn-secondary me-1">
+                                    <i class="bi bi-arrow-left me-1"></i>
+                                    <span>Trở về</span>
+                                </a>
+                            }
+                            <button id="btn-submit" onclick="showSpinner();" type="submit" class="btn btn-primary">
+                                <span id="spinner" class="visually-hidden">
+                                    <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Loading...</span>
+                                    <span>Đang xử lý</span>
+                                </span>
+                                <span id="btn-content">
+                                    <i class="bi bi-floppy"></i>
+                                    <span>Lưu</span>
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+@if (role != Role.Student)
+{
+    <script>
+        const target = document.getElementById('toggle-sidebar-target'); // The target div
+
+        const toggleSidebarBtn = document.getElementById('toggle-sidebar-btn');
+
+        toggleSidebarBtn.addEventListener('click', function () {
+            const targetDivRect = target.getBoundingClientRect();
+            const targetDivLeft = targetDivRect.left - 150;
+
+            // Set the new left position
+            toggleSidebarBtn.style.left = targetDivLeft + 'px';
+        });
+    </script>
+}

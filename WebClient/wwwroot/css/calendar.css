@@ -1,0 +1,39 @@
+﻿#calendar {
+    margin: 0 auto;
+}
+
+.modal span {
+  word-break: break-all;
+}
+
+
+
+.custom-event {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: space-between;
+    cursor: pointer;
+  
+}
+
+.custom-event h6 {
+    white-space: nowrap;
+    word-break: break-word;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 500px;
+}
+
+.btn-schedule-action {
+    height: 35px;
+    font-size: 13px;
+}
+
+.text-blue {
+    color: blue;
+}
+
+span.break-all-word {
+    word-break: break-all;
+}

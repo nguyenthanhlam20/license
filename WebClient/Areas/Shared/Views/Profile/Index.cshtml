@@ -1,0 +1,69 @@
+﻿@using ViewModels.Accounts
+@using WebClient.Helpers
+@using Core.Enums;
+
+@model AccountVM
+@{
+    UserInfo userInfo = SessionHelper.GetObject<UserInfo>(Context.Session, "UserInfo");
+    Role role = Role.Student;
+    if (userInfo != null)
+    {
+        role = (Role)userInfo.RoleNumber;
+
+    }
+}
+
+<div class="pagetitle @(role == Role.Student ? "pt-5 mb-3" : "") ">
+    <h1>Thông tin cá nhân</h1>
+</div><!-- End Page Title -->
+
+<div class="@(role == Role.Student ? "container" : "")">
+    <div class="row profile">
+        <div id="toggle-sidebar-target" class="col-sm-12 col-md-6 col-lg-6 m-auto">
+            <div class="card p-3 profile-card">
+                <div class="row mb-2 center">
+                    <div class="avatar">
+                        @if (String.IsNullOrEmpty(Model?.AvatarUrl))
+                        {
+                            <img id="avatar-preview" src="/assets/images/default-img.png" alt="Avatar" class="rounded-circle img-fluid">
+
+                        }
+                        else
+                        {
+                            <img id="avatar-preview" src="@Model.AvatarUrl" alt="Avatar" class="rounded-circle img-fluid">
+                        }
+                    </div>
+                </div>
+                <div class="row mb-2">
+                    <label class="col-sm-12">Email</label>
+                    <div class="col-sm-12">
+                        <input disabled asp-for="Email" type="text" class="form-control">
+                    </div>
+                </div>
+                <div class="row mb-2">
+                    <label class="col-sm-12">Tên đầy đủ</label>
+                    <div class="col-sm-12">
+                        <input disabled asp-for="Fullname" type="text" class="form-control">
+                    </div>
+                </div>
+               
+               
+         
+                <div class="row">
+                    <div class="col-sm-12">
+                        <a  asp-area="Shared" asp-controller="Profile" asp-action="Update" class="btn btn-primary">
+                            <i class="bi bi-pencil me-1"></i>
+                            <span id="btn-edit-text">Chỉnh sửa</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@if (role != Role.Student)
+{
+    <script src="~/js/frog.js" asp-append-version="true"></script>
+}
+

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project>
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAbLnnhfU/AUe71+nPdGhbvgAAAAACAAAAAAAQZgAAAAEAACAAAAALz0ZbYqljhwEOxiTndbDMJS7IeeEbK1QiIOfouf+yOwAAAAAOgAAAAAIAACAAAACDmKlQ0uHgu2PqGjbpBbiQ5dEEWxlr9/7bzWKH3v5KbIAAAABIMjOm0HBPcqYlCHGTgKG3lX3oWBwTzmAbu+cUJa+zHoGMQz5XAH/Lj6ydvXE20WNDPkn+XtYGBmFE69G4TdoKMEmfJvGSVijsO9oxDJ3WbqvANPbQx/JAKbc6C6pswhk3D0cRCdG6s7FjH8YPZz4aOmgxe6iNVaf+OwL39JJ96UAAAADMkZztrv2enRQHRETL21SyYMfDe3kB8C+h6R8ezFuFsHg05O5hjdMgPm2Up+7KWE3Cgu/j+6MYiogX0GXO1Ok4</EncryptedPassword>
+    <History>True|2024-03-06T19:10:48.0286323Z;</History>
+    <LastFailureDetails />
+  </PropertyGroup>
+  <ItemGroup>
+    <DestinationConnectionStrings Include="DB">
+      <Value>Server=tcp:fcmssqlserver.database.windows.net,1433%3bInitial Catalog=OnlineExam%3bPersist Security Info=False%3bUser ID=fcms%3bPassword=Lam2001%40%3bMultipleActiveResultSets=False%3bEncrypt=True%3bTrustServerCertificate=False%3bConnection Timeout=30%3b</Value>
+    </DestinationConnectionStrings>
+  </ItemGroup>
+</Project>

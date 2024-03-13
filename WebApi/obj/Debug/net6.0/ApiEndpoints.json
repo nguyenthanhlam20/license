@@ -1,0 +1,108 @@
+[
+  {
+    "ContainingType": "WebApi.Controllers.Admin.AccountController",
+    "Method": "CreateAccountManual",
+    "RelativePath": "api/Admin/Account/CreateAccountManual",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "ViewModels.Accounts.AccountVM",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApi.Controllers.Admin.AccountController",
+    "Method": "GetAccountByEmail",
+    "RelativePath": "api/Admin/Account/GetAccountByEmail",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "email",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApi.Controllers.Admin.AccountController",
+    "Method": "GetAll",
+    "RelativePath": "api/Admin/Account/GetAll",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "ViewModels.Paging.AccountPagingRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApi.Controllers.Admin.AccountController",
+    "Method": "UpdateAccountManual",
+    "RelativePath": "api/Admin/Account/UpdateAccountManual",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "ViewModels.Accounts.AccountVM",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApi.Controllers.AuthenController",
+    "Method": "AccessByEmail",
+    "RelativePath": "api/Authen/AccessByEmail",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "ViewModels.Authens.SignInVM",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApi.Controllers.AuthenController",
+    "Method": "Register",
+    "RelativePath": "api/Authen/Register",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "ViewModels.Accounts.AccountVM",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApi.Controllers.Student.HomeController",
+    "Method": "Index",
+    "RelativePath": "api/User/Home/Index",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  }
+]
