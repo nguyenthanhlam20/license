@@ -1,5 +1,4 @@
-﻿using DataAccess.LicenseContext;
-using Microsoft.AspNetCore.Identity;
+﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using ViewModels;
 using ViewModels.Accounts;
@@ -8,6 +7,7 @@ using System.Text.RegularExpressions;
 using Core.Constants;
 using ViewModels.Paging;
 using Core.Helpers;
+using DataAccess.LicensePlateContext;
 
 namespace Repositories.Accounts
 {
@@ -15,12 +15,12 @@ namespace Repositories.Accounts
     {
         private readonly UserManager<Account> userManager;
         private readonly RoleManager<IdentityRole<Guid>> roleManager;
-        private readonly LicenseDbContext _context;
+        private readonly LicensePlateDbContext _context;
 
         public AccountRepository(
             UserManager<Account> userManager,
             RoleManager<IdentityRole<Guid>> roleManager,
-            LicenseDbContext context
+            LicensePlateDbContext context
         )
         {
             this.userManager = userManager;

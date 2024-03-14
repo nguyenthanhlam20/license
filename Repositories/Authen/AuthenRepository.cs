@@ -1,5 +1,4 @@
-﻿using DataAccess.LicenseContext;
-using DataAccess.Models;
+﻿using DataAccess.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -12,6 +11,7 @@ using Microsoft.AspNetCore.Mvc;
 using ViewModels;
 using ViewModels.Authens;
 using Core.Helpers;
+using DataAccess.LicensePlateContext;
 
 namespace Repositories.Authen
 {
@@ -21,14 +21,14 @@ namespace Repositories.Authen
         private readonly SignInManager<Account> signInManager;
         private readonly RoleManager<IdentityRole<Guid>> roleManager;
         private readonly IConfiguration configuration;
-        private readonly LicenseDbContext _context;
+        private readonly LicensePlateDbContext _context;
 
         public AuthenRepository(
             UserManager<Account> userManager,
             SignInManager<Account> signInManager,
             RoleManager<IdentityRole<Guid>> roleManager,
             IConfiguration configuration,
-            LicenseDbContext context
+            LicensePlateDbContext context
         )
         {
             this.userManager = userManager;

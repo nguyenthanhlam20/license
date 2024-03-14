@@ -1,4 +1,4 @@
-using DataAccess.LicenseContext;
+using DataAccess.LicensePlateContext;
 using Repositories.Authen;
 
 using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -23,7 +23,7 @@ builder.Services.AddControllers().AddJsonOptions(o => o.JsonSerializerOptions.Re
 
 // Register and Config Identity
 builder.Services.AddIdentity<Account, IdentityRole<Guid>>()
-    .AddEntityFrameworkStores<LicenseDbContext>()
+    .AddEntityFrameworkStores<LicensePlateDbContext>()
     .AddDefaultTokenProviders()
     .AddRoles<IdentityRole<Guid>>();
 
@@ -59,7 +59,7 @@ builder.Services.Configure<EmailSettings>(builder.Configuration.GetSection("Emai
 builder.Services.AddTransient<EmailService>();
 
 //Regist DbContext Service
-builder.Services.AddDbContext<LicenseDbContext>(options =>
+builder.Services.AddDbContext<LicensePlateDbContext>(options =>
 {
     options.UseSqlServer(builder.Configuration.GetConnectionString("DB"));
 

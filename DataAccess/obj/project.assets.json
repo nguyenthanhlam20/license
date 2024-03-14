@@ -2753,11 +2753,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ADMIN\\Downloads\\OnlineExam\\DataAccess\\DataAccess.csproj",
+      "projectUniqueName": "C:\\Users\\ADMIN\\Downloads\\license\\DataAccess\\DataAccess.csproj",
       "projectName": "DataAccess",
-      "projectPath": "C:\\Users\\ADMIN\\Downloads\\OnlineExam\\DataAccess\\DataAccess.csproj",
+      "projectPath": "C:\\Users\\ADMIN\\Downloads\\license\\DataAccess\\DataAccess.csproj",
       "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ADMIN\\Downloads\\OnlineExam\\DataAccess\\obj\\",
+      "outputPath": "C:\\Users\\ADMIN\\Downloads\\license\\DataAccess\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

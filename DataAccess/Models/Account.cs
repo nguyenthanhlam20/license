@@ -10,7 +10,7 @@ namespace DataAccess.Models
         public string Password { get; set; } = string.Empty;
 
         #region Relationship
-        public virtual ICollection<License>? Licenses { get; set; }
+        public virtual ICollection<LicensePlate>? LicensePlates { get; set; }
         #endregion
     }
 }

@@ -7,11 +7,11 @@ using Data.Configurations;
 using DataAccess.Configurations;
 using DataAccess.Seeding;
 
-namespace DataAccess.LicenseContext
+namespace DataAccess.LicensePlateContext
 {
-    public class LicenseDbContext : IdentityDbContext<Account, IdentityRole<Guid>, Guid>
+    public class LicensePlateDbContext : IdentityDbContext<Account, IdentityRole<Guid>, Guid>
     {
-        public LicenseDbContext(DbContextOptions options) : base(options)
+        public LicensePlateDbContext(DbContextOptions options) : base(options)
         {
         }
 
@@ -38,7 +38,7 @@ namespace DataAccess.LicenseContext
         {
             modelBuilder.ApplyConfiguration(new AccountConfiguration());
             modelBuilder.ApplyConfiguration(new DistrictConfiguration());
-            modelBuilder.ApplyConfiguration(new LicenseConfiguration());
+            modelBuilder.ApplyConfiguration(new LicensePlateConfiguration());
 
             new AccountSeeder(modelBuilder).Seed();
 
@@ -48,7 +48,7 @@ namespace DataAccess.LicenseContext
         #region DbSet
         public DbSet<Account> Accounts { get; set; }
         public DbSet<District> Districts { get; set; }
-        public DbSet<License> Licenses { get; set; }
+        public DbSet<LicensePlate> LicensePlates { get; set; }
    
         #endregion
     }

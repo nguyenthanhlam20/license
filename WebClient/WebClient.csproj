@@ -193,4 +193,8 @@
     <PackageReference Include="Serilog.Sinks.File" Version="5.0.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Areas\Admin\Views\LicensePlate\" />
+  </ItemGroup>
+
 </Project>

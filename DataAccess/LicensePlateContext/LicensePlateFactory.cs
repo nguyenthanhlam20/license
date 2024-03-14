@@ -1,14 +1,14 @@
-﻿using DataAccess.LicenseContext;
+﻿using DataAccess.LicensePlateContext;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Design;
 using Microsoft.Extensions.Configuration;
 
 
-namespace DataAccess.LicenseContext
+namespace DataAccess.LicensePlateContext
 {
-    public class LicenseFactory : IDesignTimeDbContextFactory<LicenseDbContext>
+    public class LicensePlateFactory : IDesignTimeDbContextFactory<LicensePlateDbContext>
     {
-        public LicenseDbContext CreateDbContext(string[] args)
+        public LicensePlateDbContext CreateDbContext(string[] args)
         {
             IConfigurationRoot configuration = new ConfigurationBuilder()
                 .SetBasePath(Directory.GetCurrentDirectory())
@@ -16,10 +16,10 @@ namespace DataAccess.LicenseContext
                 .Build();
 
             var connectionString = configuration.GetConnectionString("DB");
-            var optionBuilder = new DbContextOptionsBuilder<LicenseDbContext>();
+            var optionBuilder = new DbContextOptionsBuilder<LicensePlateDbContext>();
             optionBuilder.UseSqlServer(connectionString);
 
-            return new LicenseDbContext(optionBuilder.Options);
+            return new LicensePlateDbContext(optionBuilder.Options);
         }
     }
 }
