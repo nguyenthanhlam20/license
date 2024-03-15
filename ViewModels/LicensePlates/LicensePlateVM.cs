@@ -14,8 +14,9 @@ namespace ViewModels.LicensePlates
         public DateTime CreatedDate { get; set; }
         public Guid? Id { get; set; }
         public int? DistrictId { get; set; }
-
-        public  Account? Account { get; set; }
+        public int SeriesId { get; set; }
+        public int Number { get; set; }
+        public Account? Account { get; set; }
         public  District? District { get; set; }
     }
 }

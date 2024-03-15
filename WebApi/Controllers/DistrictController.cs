@@ -4,6 +4,8 @@ using Microsoft.AspNetCore.Mvc;
 using ViewModels.Paging;
 using ViewModels.Districts;
 using Repositories.Districts;
+using System.Collections.Generic;
+using DataAccess.Models;
 
 namespace WebApi.Controllers
 {
@@ -22,18 +24,35 @@ namespace WebApi.Controllers
         }
 
 
-        [HttpGet]
-        public async Task<IActionResult> GetDistricts()
+        [HttpPost]
+        public async Task<IActionResult> GetDistricts(DistrictPagingRequest request)
         {
             try
             {
-                var subjects = await _repository.GetDistricts();
-                List<DistrictVM> subjectVMs = new();
-                if (subjects != null)
+                DistrictPagingRequest response = await _repository
+                    .GetDistricts(request);
+
+                if (response != null)
                 {
-                    subjectVMs = _mapper.Map<List<DistrictVM>>(subjects);
+                    response.ItemVMs = _mapper.Map<List<DistrictVM>>(response.Items);
+                    response.Items = null;
                 }
-                return Ok(subjectVMs);
+                return Ok(response);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error: {ex}");
+                return NotFound();
+            }
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> GetAllDistricts()
+        {
+            try
+            {
+                List<District> response = await _repository.GetDistricts();
+                return Ok(_mapper.Map<List<DistrictVM>>(response));
             }
             catch (Exception ex)
             {

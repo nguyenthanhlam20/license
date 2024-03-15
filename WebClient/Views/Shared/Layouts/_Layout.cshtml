@@ -10,7 +10,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@currentController | Online Exam</title>
+    <title>@currentController | License Plate</title>
     <link rel="icon" href="~/assets/images/logo.png" type="image/x-icon" />
     <!-- Google Fonts -->
     <link href="https://fonts.gstatic.com" rel="preconnect">
@@ -21,7 +21,6 @@
     <link rel="stylesheet" href="~/lib/bootstrap-select/css/bootstrap-select.min.css" />
 
     <link rel="stylesheet" href="~/css/shared.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/css/guest-site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/css/variables.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/css/toast.css" asp-append-version="true" />
 
@@ -37,9 +36,8 @@
 
             <div>
                 <a asp-controller="Home" asp-action="Index" class="logo scrollto me-auto me-lg-0">
-                    @* <img src="/assets/images/logo.png" /> *@
+                    <img src="/assets/images/logo.png" />
                 </a>
-                @* <span class="fw-bolder">Online Exam</span> *@
             </div>
 
             <nav id="navbar" class="navbar">
@@ -49,19 +47,19 @@
 
                     <li class="nav-item ">
                         <a asp-controller="Home" asp-action="Index" class="nav-link @(currentController == "Home" && currentAction == "Index" ? "active" : "")">
-                            Home
+                            Trang chủ
                         </a>
                     </li><!-- End Home Nav -->
 
                     <li class="nav-item ">
-                        <a asp-area="User" asp-controller="District" asp-action="Index" class="nav-link @(currentController == "Subject" ? "active" : "")">
-                            District
+                        <a asp-area="User" asp-controller="District" asp-action="Index" class="nav-link @(currentController.Contains("District") ? "active" : "")">
+                            Danh sách tỉnh
                         </a>
                     </li><!-- End Events Nav -->
 
                     <li class="nav-item ">
-                        <a asp-area="User" asp-controller="License" asp-action="Index" class="nav-link @(currentController == "Quiz"  ? "active" : "")">
-                            License
+                        <a asp-area="User" asp-controller="LicensePlate" asp-action="Index" class="nav-link @(currentController.Contains("LicensePlate") ? "active" : "")">
+                            Bấm biển số
                         </a>
                     </li><!-- End Events Nav -->
                 </ul>
@@ -74,45 +72,43 @@
                 <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow ">
                     <li class="nav-item " title="Trang chủ">
                         <a asp-controller="Home" asp-action="Index" class="nav-link @(currentController == "Home" && currentAction == "Index" ? "active" : "")">
-                            Home
+                            Trang chủ
                         </a>
                     </li><!-- End Home Nav -->
 
-                    <li class="nav-item " title="Sự kiện">
-                        <a asp-controller="Subject" asp-action="Index" class="nav-link @(currentController == "Subject" ? "active" : "")">
-                            Subject
+                    <li class="nav-item ">
+                        <a asp-area="User" asp-controller="District" asp-action="Index" class="nav-link @(currentController.Contains("District") ? "active" : "")">
+                            Danh sách tỉnh
                         </a>
                     </li><!-- End Events Nav -->
 
-                    <li class="nav-item " title="Tin tức">
-                        <a asp-controller="Quiz" asp-action="Index" class="nav-link @(currentController == "Quiz"  ? "active" : "")">
-                            Quiz
+                    <li class="nav-item ">
+                        <a asp-area="User" asp-controller="LicensePlate" asp-action="Index" class="nav-link @(currentController.Contains("LicensePlate") ? "active" : "")">
+                            Bấm biển số
                         </a>
                     </li><!-- End Events Nav -->
 
                     <li class="nav-item px-3 py-2">
-                        <a class="btn btn-primary btn-signin nav-link color-white py-2" asp-controller="Authen" asp-action="SignIn">Sign In</a>
+                        <a class="btn btn-primary btn-signin nav-link color-white py-2" asp-controller="Authen" asp-action="SignIn" asp-area="">Đăng nhập</a>
                     </li><!-- End Clubs Nav -->
 
                 </ul><!-- End Profile Dropdown Items -->
 
             </div>
 
-            <a class="btn btn-primary btn-signin" asp-controller="Authen" asp-action="SignIn">Sign In</a>
+            <a class="btn btn-primary btn-signin" asp-controller="Authen" asp-action="SignIn" asp-area="">Đăng nhập</a>
 
         </div>
     </header><!-- End Header -->
-    <main id="main" class="main ">
+    <main id="main" class="main min-vh-100">
         @RenderBody()
-
-
     </main><!-- End #main -->
     <!-- ======= Footer ======= -->
     <footer id="footer" class="footer">
 
         <div class="footer-content">
             <div class="text-center">
-                &copy; Copyright by <strong><span>Online Exam</span></strong>
+                &copy; Copyright by <strong><span>License Plate</span></strong>
             </div>
         </div>
 

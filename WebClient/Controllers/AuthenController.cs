@@ -109,8 +109,6 @@ namespace WebClient.Controllers
                     // Show a success message
                     ToastHelper.ShowSuccess(TempData, "Login successful!");
 
-                    //Console.WriteLine("role: " + roleStr);
-
                     UserInfo userInfo = new UserInfo();
                     // Store user information in the UserService
                     userInfo.Role = roleStr; // Store the user's role
@@ -118,7 +116,6 @@ namespace WebClient.Controllers
                     userInfo.Fullname = tokenHelper.FindClaimValueByKey(allClaims, "givenname");
                     userInfo.Email = tokenHelper.FindClaimValueByKey(allClaims, "email");
                     userInfo.UserId = Guid.Parse(tokenHelper.FindClaimValueByKey(allClaims, "nameidentifier"));
-                    userInfo.AvatarUrl = tokenHelper.FindClaimValueByKey(allClaims, "AvatarUrl");
 
                     var claims = new List<Claim>
                                 {
@@ -140,7 +137,7 @@ namespace WebClient.Controllers
                         case Role.Admin:
                             return RedirectToAction("Index", "Home", new { area = "Admin" });
                         case Role.Student:
-                            return RedirectToAction("Index", "Home", new { area = "Student" });
+                            return RedirectToAction("Index", "Home", new { area = "User" });
                         default:
                             return View("Views/Home/Index.cshtml");
                     }
@@ -164,8 +161,6 @@ namespace WebClient.Controllers
         {
             try
             {
-                Console.WriteLine("Run here");
-
                 SessionHelper.Remove(HttpContext.Session, "UserInfo");
                 SessionHelper.Remove(HttpContext.Session, "AccessToken");
 

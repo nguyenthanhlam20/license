@@ -34,7 +34,7 @@ namespace Client.Areas.Admin.Controllers
                 roles = await _clientService.Get<List<RoleVM>>(ApiPaths.Admin + "/Role/GetRoles");
             }
             SessionHelper.SetObject<List<RoleVM>>(HttpContext.Session, "Roles", roles);
-            return View();
+            return RedirectToAction("Index", "User");
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

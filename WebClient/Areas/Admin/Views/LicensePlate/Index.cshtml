@@ -1,0 +1,121 @@
+﻿@using ViewModels.Paging
+@using ViewModels.Accounts
+@using ViewModels.LicensePlates
+@model LicensePlatePagingRequest
+@{
+    int totalRecord = (int)Model.TotalRecord;
+    int totalPages = (int)Model.TotalPages;
+    int currentPage = Model.CurrentPage;
+    int pageSize = Model.PageSize;
+
+    int startPage = Math.Max(1, currentPage - 2);
+    int endPage = Math.Min(totalPages, currentPage + 2);
+
+    int startIndex = ((currentPage - 1) * pageSize) + 1;
+    int endIndex = startIndex + pageSize - 1;
+    if (endIndex > totalRecord) endIndex = totalRecord;
+
+    int ordinalNumber = 1;
+}
+
+<div class="pagetitle">
+    <h1>List LicensePlate</h1>
+</div><!-- End Page Title -->
+
+<div class="card p-3">
+
+    <div class="row mb-2">
+        <form id="form-search" method="get" asp-area="Admin" asp-controller="LicensePlate" asp-action="Index">
+            <input name="IsSearch" type="hidden" value="true">
+            <div class="row">
+                <div class=" col-sm-12 col-lg-8 pe-lg-0">
+                    <div class="input-group">
+                        <input asp-for="@Model.SearchTerm" name="SearchTerm" type="text" class="form-control rounded-0 rounded-start" id="search-term"
+                               placeholder="Enter licensePlate name">
+                        <button type="submit" class="btn btn-info rounded-0 rounded-end">
+                            <span><i class="bi bi-search"></i> Search</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-lg-4 pt-2 pt-lg-0 text-lg-end">
+                    <a asp-area="Admin" asp-controller="LicensePlate" asp-action="Create" class="btn btn-primary">
+                        <span><i class="bi bi-plus-circle-fill me-1"></i>Create new licensePlate</span>
+                    </a>
+                </div>
+            </div>
+            <input id="current-page" type="hidden" asp-for="CurrentPage" name="CurrentPage" />
+        </form>
+    </div>
+    @if (Model?.ItemVMs?.Count > 0)
+    {
+            <div class="table-container">
+                <table class="useful-table">
+                    <thead>
+                        <tr>
+                            <th class="col-1">Index</th>
+                            <th class="col-2">LicensePlate name</th>
+                            <th class="col-1">Prefix</th>
+                            <th >Description</th>
+                        </tr>
+                    </thead>
+                    <tbody class="useful-table-body">
+                    @foreach (var licensePlate in Model.ItemVMs)
+                    {
+                                <tr>
+                                    <td>@(ordinalNumber++)</td>
+                                    <td>
+                                        <a class="link-underline" asp-area="Admin" asp-controller="LicensePlate" asp-action="Details" asp-route-licensePlateId="@licensePlate.LicensePlateId">
+                                            <span> @licensePlate.LicensePlateNumber</span>
+                                        </a>
+                                    </td>
+
+                                </tr>
+                    }
+
+                    </tbody>
+                </table>
+            </div>
+            <div class="row d-flex justify-content-center align-content-center mt-3">
+                <div class="col">
+                    <span class="fst-italic ">Show <strong>@startIndex - @endIndex</strong> in total of <strong> @totalRecord</strong> licensePlates </span>
+                </div>
+            @if (totalPages > 1)
+            {
+                        <ul class="pagination justify-content-end col">
+                            <li class="page-item @((currentPage == 1) ? "disabled" : "")">
+                                <a class="page-link link-paging" href="?currentPage=@(currentPage-1)" tabindex="-1" aria-disabled="true">Previous</a>
+                            </li>
+
+                    @if (currentPage > 3)
+                    {
+                                    <li class="page-item disabled"><span class="page-link">...</span></li>
+                    }
+
+                    @for (int pageIndex = startPage; pageIndex <= endPage; pageIndex++)
+                    {
+                                    <li class="page-item @(pageIndex == currentPage ? "link-active" : "")">
+                                        <a class="page-link link-paging " href="?currentPage=@pageIndex">@pageIndex</a>
+                                    </li>
+                    }
+
+                    @if (currentPage < Math.Ceiling(totalRecord / 10.0) - 2)
+                    {
+                                    <li class="page-item disabled"><span class="page-link">...</span></li>
+                    }
+
+                            <li class="page-item @((currentPage == totalPages) ? "disabled" : "")">
+                                <a class="page-link link-paging" href="?currentPage=@(currentPage+1)">Next</a>
+                            </li>
+                        </ul>
+
+            }
+            </div>
+    }
+    else
+    {
+            <div class="h-100">
+                <h6 class="fw-bold">LicensePlates not found.</h6>
+            </div>
+    }
+
+</div>

@@ -39,8 +39,11 @@ namespace DataAccess.LicensePlateContext
             modelBuilder.ApplyConfiguration(new AccountConfiguration());
             modelBuilder.ApplyConfiguration(new DistrictConfiguration());
             modelBuilder.ApplyConfiguration(new LicensePlateConfiguration());
+            modelBuilder.ApplyConfiguration(new SeriesConfiguration());
 
             new AccountSeeder(modelBuilder).Seed();
+            new DistrictSeeder(modelBuilder).Seed();
+            new SeriSeeder(modelBuilder).Seed();
 
             base.OnModelCreating(modelBuilder);
         }
@@ -49,6 +52,7 @@ namespace DataAccess.LicensePlateContext
         public DbSet<Account> Accounts { get; set; }
         public DbSet<District> Districts { get; set; }
         public DbSet<LicensePlate> LicensePlates { get; set; }
+        public DbSet<Seri> Series { get; set; }
    
         #endregion
     }

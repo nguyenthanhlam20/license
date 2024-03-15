@@ -7,102 +7,55 @@
 
 
 <div class="pagetitle">
-    <h1>Student Details</h1>
+    <h1>Thông tin người dùng</h1>
 </div><!-- End Page Title -->
 
-<div class="row">
-    <div class="card p-3 mb-3">
-        <form id="form-edit" method="POST" asp-area="Admin" asp-controller="User" asp-action="Update">
-            <div class="row mb-3">
-                <div class="col-sm-12">
-                    <label class="col-sm-12 fw-bold">Email</label>
-                    <div class="col-sm-12">
-                        <input disabled asp-for="Email" type="text" class="form-control">
-                    </div>
-                </div>
-
-            </div>
-            <div class="row mb-3">
-                <div class="col-sm-12">
-                    <label class="col-sm-12 fw-bold">Fullname</label>
-                    <div class="col-sm-12">
-                        <input disabled asp-for="Fullname" name="Fullname" type="text" class="form-control">
-                    </div>
-                </div>
-            </div>
-            <div class="row mb-3">
-                <label class=" col-sm-12  fw-bold">Active Status</label>
-                <div class="col-sm-12">
-                    <span class="badge rounded-pill @(Model?.IsAccountActive == true? "bg-success" : "bg-danger")">@(Model?.IsAccountActive == true ? "Active" : "Deactive") </span>
-                </div>
-            </div>
-
-            <div class="row mb-2 mt-3">
-                <div class="col-sm-12 d-flex flex-row justify-content-start">
-                    <a asp-area="Admin" asp-controller="User" asp-action="Index" class="btn btn-secondary">
-
-                        <i class="bi bi-arrow-left"></i>
-                        <span>Return</span>
-                    </a>
-                    <a asp-area="Admin" asp-controller="User" asp-action="Update" asp-route-email="@Model.Email" class="btn btn-primary mx-2">
-                        <i class="bi bi-pencil"></i>
-                        <span>Edit</span>
-                    </a>
-                </div>
-            </div>
-
-        </form>
-
-    </div>
-
-    <div class="card p-3">
-        <h5 class="fw-bold mb-3">List quiz history</h5>
-       @*  @if (response != null && response.Items.Count > 0)
-        {
-            @foreach (QuizHistory item in response.Items)
-            {
-                <div class="card px-3 py-2" title="@item.Quiz.Title" data-bs-toggle="tooltip" data-bs-placement="top">
-                    <div class="d-flex align-items-center justify-content-between">
-                        <div class="d-flex align-items-center">
-                            <span style="margin-right: 15px; font-weight: bold; color: red" className="text-danger fw-bold mx-3">@(item.Score + "/" + item.QuestionHistories.Count)</span>
-                            <div class="me-3">
-                                <i class="bi bi-clipboard-check fs-2"></i>
-                            </div>
-                            <div>
-                                <div class="d-flex flex-row ">
-                                    <h6 class="club-name fs-15 fw-bold">@item.Quiz.Title</h6>
-                                </div>
-                                <div class="d-flex flex-row ">
-                                    <h6 class="fs-14 me-3">
-                                        <i class="bi bi-question-circle"></i>
-                                        <span>@item.QuestionHistories.Count</span>
-                                    </h6>
-                                    <h6 class="fs-14 me-3">
-                                        <i class="bi bi-clock"></i>
-                                        <span>@item.Quiz.Duration</span>
-                                        <span> minutes</span>
-                                    </h6>
-                                    <h6 class="fs-14 me-3">
-                                        <i class="bi bi-calendar-event"></i>
-                                        <span>@item.DateTaken.ToShortDateString()</span>
-                                    </h6>
-                                    <h6 class="fs-14 ">
-                                        <i class="bi bi-book"></i>
-                                        <span>@item.Quiz.Subject.SubjectName</span>
-                                    </h6>
-                                </div>
+<div class="row mb-2">
+    <div class="col-sm-12 col-lg-8 m-auto">
+        <div class="row">
+            <div class="card p-3 mb-3">
+                <form id="form-edit" method="POST" asp-area="Admin" asp-controller="User" asp-action="Update">
+                    <div class="row mb-3">
+                        <div class="col-sm-12">
+                            <label class="col-sm-12 fw-bold">Email</label>
+                            <div class="col-sm-12">
+                                <input disabled asp-for="Email" type="text" class="form-control">
                             </div>
                         </div>
-                        <div>
-                            <a class="btn btn-primary" href="/Admin/QuizHistory/Details?quizId=@item.QuizId">View</a>
+
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-sm-12">
+                            <label class="col-sm-12 fw-bold">Tên đầy đủ</label>
+                            <div class="col-sm-12">
+                                <input disabled asp-for="Fullname" name="Fullname" type="text" class="form-control">
+                            </div>
                         </div>
                     </div>
-                </div>
-            }
-        }
-        else
-        {
-            <h6 class="fw-bold">User hasn't taken any quizzes.</h6>
-        } *@
+                    <div class="row mb-3">
+                        <label class=" col-sm-12  fw-bold">Trạng thái hoạt động</label>
+                        <div class="col-sm-12">
+                            <span class="badge rounded-pill @(Model?.IsAccountActive == true? "bg-success" : "bg-danger")">@(Model?.IsAccountActive == true ? "Đang hoạt động" : "Ngừng hoạt động") </span>
+                        </div>
+                    </div>
+
+                    <div class="row mb-2 mt-3">
+                        <div class="col-sm-12 d-flex flex-row justify-content-start">
+                            <a asp-area="Admin" asp-controller="User" asp-action="Index" class="btn btn-secondary">
+
+                                <i class="bi bi-arrow-left"></i>
+                                <span>Trở về</span>
+                            </a>
+                            <a asp-area="Admin" asp-controller="User" asp-action="Update" asp-route-email="@Model.Email" class="btn btn-primary mx-2">
+                                <i class="bi bi-pencil"></i>
+                                <span>Chỉnh sửa</span>
+                            </a>
+                        </div>
+                    </div>
+
+                </form>
+
+            </div>
+        </div>
     </div>
 </div>

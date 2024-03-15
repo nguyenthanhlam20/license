@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "lvYg03/O4pXuRyTBHtKNTEcincscmOcSKvJI1QbDc04=",
+  "Hash": "U6BgzU8nAdF+cI1lyE6o3pKGRTBk39y9Y4DIxUfcJQA=",
   "Source": "WebClient",
   "BasePath": "_content/WebClient",
   "Mode": "Default",
@@ -110,6 +110,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\icons\\info.svg"
+    },
+    {
+      "Identity": "C:\\Users\\ADMIN\\Downloads\\license\\WebClient\\wwwroot\\assets\\icons\\location.png",
+      "SourceId": "WebClient",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ADMIN\\Downloads\\license\\WebClient\\wwwroot\\",
+      "BasePath": "_content/WebClient",
+      "RelativePath": "assets/icons/location.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\icons\\location.png"
     },
     {
       "Identity": "C:\\Users\\ADMIN\\Downloads\\license\\WebClient\\wwwroot\\assets\\icons\\programming.svg",

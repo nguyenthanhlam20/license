@@ -13,7 +13,6 @@ namespace WebClient.Areas.User.Controllers
     [Area("User")]
     [Route("User/[Controller]/[Action]")]
     [Authorize(Roles = "User")]
-    //[ValidateAntiForgeryToken]
     public class HomeController : Controller
     {
         // Dependency injection of services

@@ -1,0 +1,40 @@
+﻿@using ViewModels.Series
+@using ViewModels.LicensePlates
+@model SeriVM
+<div class="pagetitle">
+    <h1>Thông tin số seri</h1>
+</div><!-- End Page Title -->
+
+<div class="row mb-2">
+    <div class="col-sm-12 col-lg-8 m-auto">
+        <div class="card p-3">
+            <div class="row mb-3">
+                <label class="col-sm-12 fw-bold">Tên số seri<span class="ms-1 text-red">*</span></label>
+                <div class="col-sm-12">
+                    <input disabled asp-for="Title" name="Title" type="text" class="form-control"  />
+                    <span asp-validation-for="Title" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <label class="col-sm-12 fw-bold">Mô tả số seri<span class="ms-1 text-red">*</span></label>
+                <div class="col-sm-12">
+                    <textarea disabled asp-for="Description" name="Description" type="text" class="form-control"></textarea>
+                    <span asp-validation-for="Description" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="row mb-2">
+                <div class="col-sm-12 d-flex flex-row justify-content-start">
+                    <a asp-area="Admin" asp-controller="Seri" asp-action="Index" class="btn btn-secondary me-2">
+                        <i class="bi bi-arrow-left"></i>
+                        <span>Trở về</span>
+                    </a>
+                    <a asp-area="Admin" asp-controller="Seri" asp-action="Update" asp-route-seriId="@Model.SeriId" class="btn btn-primary">
+                        <i class="bi bi-pencil"></i>
+                        <span>Chỉnh sửa</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

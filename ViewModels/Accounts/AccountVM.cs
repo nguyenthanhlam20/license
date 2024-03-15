@@ -4,11 +4,11 @@ namespace ViewModels.Accounts
 {
     public class AccountVM
     {
-        [Required(ErrorMessage = "* Please enter fullname")]
+        [Required(ErrorMessage = "* Nhập tên người dùng")]
         public string? Fullname { get; set; } = string.Empty;
 
-        [Required(ErrorMessage = "* Please enter email")]
-        [EmailAddress(ErrorMessage = "* Please enter correct email format 'example@gmail.com'")]
+        [Required(ErrorMessage = "* Nhập email")]
+        [EmailAddress(ErrorMessage = "* Email sai định dạng")]
         public string? Email { get; set; } = string.Empty;
         public string? AvatarUrl { get; set; }
         public DateTime? StartDate { get; set; }

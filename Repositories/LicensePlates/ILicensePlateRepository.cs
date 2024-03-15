@@ -10,6 +10,7 @@ namespace Repositories.LicensePlates
         Task<LicensePlate> GetLicensePlateById(int id);
         Task<bool> AddLicensePlate(LicensePlate licensePlate);
         Task<bool> UpdateLicensePlate(LicensePlate licensePlate);
+        Task<int> GetAvailableNumber(LicensePlate licensePlate);
         Task<bool> IsExistedLicensePlate(int licensePlateId, string licensePlateName);
     }
 }

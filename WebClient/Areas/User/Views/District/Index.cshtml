@@ -1,0 +1,49 @@
+﻿@using ViewModels.Paging
+@using ViewModels.Districts
+@model DistrictPagingRequest
+<div class="pagetitle">
+    <h1>Danh sách tỉnh</h1>
+</div><!-- End Page Title -->
+<div class="row">
+    <div class="col-sm-12 col-lg-8 m-auto">
+        <div class="filter">
+            <form asp-area="Student" asp-controller="District" asp-action="Index" method="get">
+                <div class="input-group">
+                    <input type="text" name="SearchTerm" value="@Model.SearchTerm" class="form-control rounded-0 rounded-start" id="search-term"
+                           placeholder="Nhập tên tỉnh" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                    <div class="input-group-append">
+                        <button type="submit" class="btn btn-primary rounded-0 rounded-end">
+                            <span><i class="bi bi-search"></i> Tìm kiếm</span>
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="section-content mt-4">
+            @if (Model != null && Model?.ItemVMs?.Count > 0)
+            {
+                <div class="row d-flex flex-row justify-content-center mb-lg-5 row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 ">
+                    @foreach (DistrictVM item in Model.ItemVMs)
+                    {
+                        <div class="col mb-4">
+                            <div class="card p-3" title="@item.Name" data-bs-toggle="tooltip" data-bs-placement="top">
+                                <a asp-controller="District" asp-action="Details" asp-route-districtId="@item.DistrictId">
+                                    <div class="d-flex flex-column justify-content-center align-items-center text-overflow text-center">
+                                        <img width="40" height="40" src="/assets/icons/location.png"  />
+                                        <h6 class="club-name fs-15 mt-3 fw-bold title">@item.Name</h6>
+                                        <h6 class="fs-14 ">@item.Prefix</h6>
+                                        <h6 class="fs-14"></h6>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    }
+                </div>
+            }
+            else
+            {
+                <h6 class="fw-bold">Không tìm thấy tỉnh nào.</h6>
+            }
+        </div>
+    </div>
+</div>

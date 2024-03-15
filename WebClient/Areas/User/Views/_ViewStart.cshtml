@@ -14,9 +14,13 @@
                 Layout = "~/Views/Shared/Layouts/_AdminLayout.cshtml";
                 break;
             default:
-                Layout = "~/Views/Shared/Layouts/_StudentLayout.cshtml";
+                Layout = "~/Views/Shared/Layouts/_UserLayout.cshtml";
                 break;
         }
+    }
+    else
+    {
+        Layout = "~/Views/Shared/Layouts/_Layout.cshtml";
     }
 
 }

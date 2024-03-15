@@ -21,108 +21,112 @@
 }
 
 <div class="pagetitle">
-    <h1>List Student</h1>
+    <h1>Quản lý người dùng</h1>
 </div><!-- End Page Title -->
 
-<div class="card p-3">
-    <div class="row mb-2">
-        <form id="form-search" method="GET" asp-area="Admin" asp-controller="User" asp-action="Index">
-            <input name="IsSearch" type="hidden" value="true">
-            <div class="row">
-                <div class=" col-sm-12 col-lg-8 pe-lg-0">
-                    <div class="input-group">
-                        <input asp-for="@Model.SearchTerm" name="SearchTerm" type="text" class="form-control rounded-0 rounded-start" id="search-term" placeholder="Enter email, fullname of user">
-                        <button type="submit" class="btn btn-info rounded-0 rounded-end">
-                            <span><i class="bi bi-search"></i> Search</span>
-                        </button>
+<div class="row mb-2">
+    <div class="col-sm-12 col-lg-8 m-auto">
+        <div class="card p-3">
+            <div class="mb-2">
+                <form id="form-search" method="GET" asp-area="Admin" asp-controller="User" asp-action="Index">
+                    <input name="IsSearch" type="hidden" value="true">
+                    <div class="row">
+                        <div class=" col-sm-12 col-lg-6 pe-lg-0">
+                            <div class="input-group">
+                                <input asp-for="@Model.SearchTerm" name="SearchTerm" type="text" class="form-control rounded-0 rounded-start" id="search-term" placeholder="Nhập email, tên người dùng">
+                                <button type="submit" class="btn btn-info rounded-0 rounded-end">
+                                    <span><i class="bi bi-search"></i> Tìm kiếm</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-lg-6 pt-2 pt-lg-0 text-lg-end">
+                            <a asp-area="Admin" asp-controller="User" asp-action="Create" class="btn btn-primary">
+                                <span><i class="bi bi-plus-circle-fill me-1"></i>Tạo mới</span>
+                            </a>
+                        </div>
                     </div>
-                </div>
-                <div class="col-sm-12 col-lg-4 pt-2 pt-lg-0 text-lg-end">
-                    <a asp-area="Admin" asp-controller="User" asp-action="Create" class="btn btn-primary">
-                        <span><i class="bi bi-plus-circle-fill me-1"></i>Create new student</span>
-                    </a>
-                </div>
+                    <input id="current-page" type="hidden" asp-for="CurrentPage" name="CurrentPage" />
+                </form>
             </div>
-            <input id="current-page" type="hidden" asp-for="CurrentPage" name="CurrentPage" />
-        </form>
-    </div>
-    @if (Model?.Items?.Count > 0)
-    {
-        <div class="table-container">
-            <table class="useful-table">
-                <thead>
-                    <tr>
-                        <th class="col-px-10">STT</th>
-
-                        <th>Email</th>
-                        <th class="col-2">Fullname</th>
-                        <th class="col-2">Status</th>
-                    </tr>
-                </thead>
-                <tbody class="useful-table-body">
-                    @foreach (AccountVM account in Model.Items)
-                    {
-                        <tr>
-                            <td>@(ordinalNumber++)</td>
-
-                            <td>
-                                <a class="link-underline" asp-asp-area="Admin" asp-asp-controller="User" asp-action="Details" asp-route-email="@account.Email">
-                                    @account.Email
-                                </a>
-                            </td>
-                            <td>@account.Fullname</td>
-                            <td>
-                                <span class="badge rounded-pill @(account?.IsAccountActive == true? "bg-success" : "bg-danger")">@(account?.IsAccountActive == true ? "Active" : "Blocked") </span>
-                            </td>
-                        </tr>
-                    }
-
-                </tbody>
-            </table>
-        </div>
-        <div class="row d-flex justify-content-center align-content-center mt-3">
-
-            <div class="col">
-                <span class="fst-italic ">Show <strong>@startIndex - @endIndex</strong> in total of <strong> @totalRecord</strong> users</span>
-            </div>
-            @if(totalPages > 1)
+            @if (Model?.Items?.Count > 0)
             {
-                <ul class="pagination justify-content-end col">
-                    <li class="page-item @((currentPage == 1) ? "disabled" : "")">
-                        <a onclick="event.preventDefault(); setCurrentPage('@(currentPage-1)')" href="#" class="page-link link-paging" tabindex="-1" aria-disabled="true">Trước</a>
-                    </li>
+                <div class="table-container">
+                    <table class="useful-table">
+                        <thead>
+                            <tr>
+                                <th class="col-px-10">STT</th>
 
-                    @if (currentPage > 3)
+                                <th>Email</th>
+                                <th>Tên đầy đủ</th>
+                                <th>Trạng thái hoạt động</th>
+                            </tr>
+                        </thead>
+                        <tbody class="useful-table-body">
+                            @foreach (AccountVM account in Model.Items)
+                            {
+                                <tr>
+                                    <td>@(ordinalNumber++)</td>
+
+                                    <td>
+                                        <a class="link-underline" asp-asp-area="Admin" asp-asp-controller="User" asp-action="Details" asp-route-email="@account.Email">
+                                            @account.Email
+                                        </a>
+                                    </td>
+                                    <td>@account.Fullname</td>
+                                    <td>
+                                        <span class="badge rounded-pill @(account?.IsAccountActive == true? "bg-success" : "bg-danger")">@(account?.IsAccountActive == true ? "Active" : "Blocked") </span>
+                                    </td>
+                                </tr>
+                            }
+
+                        </tbody>
+                    </table>
+                </div>
+                <div class="row d-flex justify-content-center align-content-center mt-3">
+
+                    <div class="col">
+                        <span class="fst-italic ">Hiện thị <strong>@startIndex - @endIndex</strong> trong tổng số <strong> @totalRecord</strong> người dùng</span>
+                    </div>
+                    @if (totalPages > 1)
                     {
-                        <li class="page-item disabled"><span class="page-link">...</span></li>
-                    }
+                        <ul class="pagination justify-content-end col">
+                            <li class="page-item @((currentPage == 1) ? "disabled" : "")">
+                                <a onclick="event.preventDefault(); setCurrentPage('@(currentPage-1)')" href="#" class="page-link link-paging" tabindex="-1" aria-disabled="true">Trước</a>
+                            </li>
 
-                    @for (int pageIndex = startPage; pageIndex <= endPage; pageIndex++)
-                    {
-                        <li class="page-item @(pageIndex == currentPage ? "link-active" : "")">
-                            <a onclick="event.preventDefault(); setCurrentPage('@pageIndex')" class="page-link link-paging" href="#">@pageIndex</a>
-                        </li>
-                    }
+                            @if (currentPage > 3)
+                            {
+                                <li class="page-item disabled"><span class="page-link">...</span></li>
+                            }
 
-                    @if (currentPage < Math.Ceiling(totalRecord / 10.0) - 2)
-                    {
-                        <li class="page-item disabled"><span class="page-link">...</span></li>
-                    }
+                            @for (int pageIndex = startPage; pageIndex <= endPage; pageIndex++)
+                            {
+                                <li class="page-item @(pageIndex == currentPage ? "link-active" : "")">
+                                    <a onclick="event.preventDefault(); setCurrentPage('@pageIndex')" class="page-link link-paging" href="#">@pageIndex</a>
+                                </li>
+                            }
 
-                    <li class="page-item @((currentPage == totalPages) ? "disabled" : "")">
-                        <a onclick="event.preventDefault(); setCurrentPage('@(currentPage + 1)')" class="page-link link-paging" href="#">Tiếp</a>
-                    </li>
-                </ul>
+                            @if (currentPage < Math.Ceiling(totalRecord / 10.0) - 2)
+                            {
+                                <li class="page-item disabled"><span class="page-link">...</span></li>
+                            }
+
+                            <li class="page-item @((currentPage == totalPages) ? "disabled" : "")">
+                                <a onclick="event.preventDefault(); setCurrentPage('@(currentPage + 1)')" class="page-link link-paging" href="#">Tiếp</a>
+                            </li>
+                        </ul>
+                    }
+                </div>
+
+
+
             }
+            else
+            {
+                <h6 class="fw-bold">Users not found.</h6>
+
+            }
+
         </div>
-
-
-
-    }
-    else
-    {
-        <h6 class="fw-bold">Users not found.</h6>
-
-    }
-
+    </div>
 </div>

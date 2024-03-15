@@ -31,6 +31,38 @@ namespace Repositories.LicensePlates
             return false;
         }
 
+        public async Task<int> GetAvailableNumber(LicensePlate licensePlate)
+        {
+            try
+            {
+                LicensePlate existed = new();
+                List<LicensePlate> query = await _context.LicensePlates.Where(x => x.DistrictId == licensePlate.DistrictId
+                  && x.SeriesId == licensePlate.SeriesId).ToListAsync();
+
+                int randomNumber = 0;
+
+                while (true)
+                {
+                    Random rnd = new Random((int)DateTime.Now.Ticks & 0x0000FFFF);
+                    // Generate a random number between 10000 and 99999
+                    randomNumber = rnd.Next(10000, 100000);
+                    existed = query.FirstOrDefault(x => x.Number == randomNumber);
+
+                    if (existed != null)
+                    {
+                        break;
+                    }
+                }
+                return randomNumber;
+
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine($"Error: {e.Message}");
+                return 0;
+            }
+        }
+
         public async Task<LicensePlate> GetLicensePlateById(int id)
         {
             LicensePlate? licensePlate = new();

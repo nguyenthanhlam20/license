@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ViewModels.LicensePlates;
 
 namespace ViewModels.Districts
 {
@@ -13,6 +14,6 @@ namespace ViewModels.Districts
         public string Name { get; set; } = string.Empty;
         public string Prefix { get; set; } = string.Empty;
 
-        public List<LicensePlate>? LicensePlates { get; set; } 
+        public List<LicensePlateVM>? LicensePlates { get; set; } 
     }
 }

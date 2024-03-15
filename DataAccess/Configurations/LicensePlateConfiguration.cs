@@ -16,6 +16,7 @@ namespace DataAccess.Configurations
             #region Relationship
             builder.HasOne(x => x.District).WithMany(x => x.LicensePlates).HasForeignKey(x => x.DistrictId).OnDelete(DeleteBehavior.NoAction);
             builder.HasOne(x => x.Account).WithMany(x => x.LicensePlates).HasForeignKey(x => x.Id).OnDelete(DeleteBehavior.NoAction);
+            builder.HasOne(x => x.Series).WithMany(x => x.LicensePlates).HasForeignKey(x => x.SeriesId).OnDelete(DeleteBehavior.NoAction);
             #endregion
         }
     }

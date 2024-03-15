@@ -1,0 +1,53 @@
+﻿@using ViewModels.Series
+@model SeriVM
+<div class="pagetitle">
+    <h1>Chỉnh sửa thông tin số seri</h1>
+</div><!-- End Page Title -->
+
+<div class="row mb-2">
+    <div class="col-sm-12 col-lg-8 m-auto">
+        <div class="card">
+            <div class="p-3">
+                <!-- General Form Elements -->
+                <form method="POST" asp-area="Admin" asp-controller="Seri" asp-action="Update" enctype="multipart/form-data">
+                    <input asp-for="SeriId" name="SeriId" type="text" class="form-control" hidden />
+
+                    <div class="row mb-3">
+                        <label class="col-sm-12 fw-bold">Số seri<span class="ms-1 text-red">*</span></label>
+                        <div class="col-sm-12">
+                            <input asp-for="Title" name="Title" type="text" class="form-control" placeholder="Nhập số seri" />
+                            <span asp-validation-for="Title" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <label class="col-sm-12 fw-bold">Mô tả<span class="ms-1 text-red">*</span></label>
+                        <div class="col-sm-12">
+                            <textarea asp-for="Description" name="Description" type="text" class="form-control" placeholder="Nhập mô tả"></textarea>
+                            <span asp-validation-for="Description" class="text-danger"></span>
+                        </div>
+                    </div>
+
+                    <div class="row mb-2">
+                        <div class="col-sm-12 d-flex flex-row justify-content-start">
+                            <a asp-area="Admin" asp-controller="Seri" asp-action="Index" class="btn btn-secondary">
+                                <i class="bi bi-arrow-left"></i>
+                                <span>Trở về</span>
+                            </a>
+                            <button onclick="showSpinner();" type="submit" class="btn btn-primary mx-2">
+                                <span id="spinner" class="visually-hidden">
+                                    <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Loading...</span>
+                                    <span>Đang xử lý</span>
+                                </span>
+                                <span id="btn-content">
+                                    <i class="bi bi-floppy"></i>
+                                    <span>Lưu</span>
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

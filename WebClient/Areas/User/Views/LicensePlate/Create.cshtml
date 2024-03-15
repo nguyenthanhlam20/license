@@ -1,0 +1,69 @@
+﻿@using ViewModels.LicensePlates
+@using ViewModels.Districts
+@using ViewModels.Series
+
+@model LicensePlateVM
+
+@{
+    var districts = ViewData["Districts"] as List<DistrictVM>;
+    var series = ViewData["Series"] as List<SeriVM>;
+}
+
+<div class="pagetitle">
+    <h1>Bấm biển số</h1>
+</div><!-- End Page Title -->
+
+<div class="row mb-2">
+    <div class="col-sm-12 col-lg-8 m-auto">
+        <div class="card p-3">
+
+            <p class="text-center">Chọn tỉnh và số seri để bấm biển số</p>
+
+            <form id="login-form" method="POST" asp-area="User" asp-controller="LicensePlate" asp-action="Create" class="row">
+                <div class="col-12 mb-3">
+                    <label class="fw-bold">Chọn tỉnh</label>
+                    <select asp-for="DistrictId" class="selectpicker show-tick form-control">
+                        @if (districts != null)
+                        {
+                            foreach (DistrictVM item in districts)
+                            {
+                                <option value="@item.DistrictId">@item.Name - @item.Prefix</option>
+                            }
+                        }
+                        else
+                        {
+                            <option value="">Không có tỉnh nào</option>
+                        }
+                    </select>
+                </div>
+                <div class="col-12  mb-3">
+                    <label class="fw-bold">Chọn số seri</label>
+                    <select asp-for="SeriesId" class="selectpicker show-tick form-control">
+                        @if (series != null)
+                        {
+                            foreach (SeriVM item in series)
+                            {
+                                <option value="@item.SeriId">@item.Title</option>
+                            }
+                        }
+                        else
+                        {
+                            <option value="">Không có số seri nào.</option>
+                        }
+                    </select>
+                </div>
+                <div class="container mb-4 ">
+                    <label class="fw-bold d-block mb-2">Định dạng biển số</label>
+                   
+                    <div type="text" name="licenseplate" class="licenseplate w-46">30C - 123.22</div>
+                </div>
+                <div class="col-12 mb-2">
+                    <button class="btn btn-primary bg-orange text-white w-100" type="submit">
+                        <i class="bi bi-check"></i>
+                        <span>Bấm biển số</span>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

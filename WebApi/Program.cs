@@ -12,6 +12,9 @@ using WebApi.Config;
 using Repositories.Accounts;
 using DataAccess.Models;
 using WebApi.Services;
+using Repositories.Districts;
+using Repositories.LicensePlates;
+using Repositories.Series;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -72,6 +75,9 @@ builder.Services.AddDbContext<LicensePlateDbContext>(options =>
 builder.Services.AddTransient<IEmailService, EmailService>();
 builder.Services.AddTransient<IAccountRepository, AccountRepository>();
 builder.Services.AddTransient<IAuthenRepository, AuthenRepository>();
+builder.Services.AddTransient<IDistrictRepository, DistrictRepository>();
+builder.Services.AddTransient<ILicensePlateRepository, LicensePlateRepository>();
+builder.Services.AddTransient<ISeriRepository, SeriRepository>();
 
 //Add Cors service
 builder.Services.AddCors(p => p.AddPolicy("cors", builder =>
@@ -81,7 +87,7 @@ builder.Services.AddCors(p => p.AddPolicy("cors", builder =>
 
 builder.Services.AddSwaggerGen(config =>
 {
-    config.SwaggerDoc("v1", new OpenApiInfo { Title = "Swagger Online Exam", Version = "v1" });
+    config.SwaggerDoc("v1", new OpenApiInfo { Title = "Swagger License Plate", Version = "v1" });
     config.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
     {
         Description = "@JWT Authorization header using the Bearer schema. \r\n\r\n" +

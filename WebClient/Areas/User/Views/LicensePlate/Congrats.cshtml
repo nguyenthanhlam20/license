@@ -1,0 +1,26 @@
+﻿@using ViewModels.LicensePlates
+@using ViewModels.Districts
+@using ViewModels.Series
+
+@model LicensePlateVM
+
+
+<div class="pagetitle">
+    <h1>Bấm biển số thành công</h1>
+</div><!-- End Page Title -->
+
+<div class="row mb-2">
+    <div class="col-sm-12 col-lg-8 m-auto">
+        <div class="card p-3">
+            <div class="container mb-4 ">
+                <label class="fw-bold d-block mb-2">Định dạng biển số</label>
+
+                <div type="text" name="licenseplate" class="licenseplate w-46">@Model.LicensePlateNumber</div>
+            </div>
+            <button class="btn btn-primary bg-orange text-white w-100" type="submit">
+                <i class="bi bi-check"></i>
+                <span>Bấm biển số</span>
+            </button>
+        </div>
+    </div>
+</div>

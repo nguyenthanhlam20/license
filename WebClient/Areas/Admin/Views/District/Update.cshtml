@@ -1,0 +1,53 @@
+﻿@using ViewModels.Districts
+@model DistrictVM
+<div class="pagetitle">
+    <h1>Chỉnh sửa thông tin tỉnh</h1>
+</div><!-- End Page Title -->
+
+<div class="row mb-2">
+    <div class="col-sm-12 col-lg-8 m-auto">
+        <div class="card">
+            <div class="p-3">
+                <!-- General Form Elements -->
+                <form method="POST" asp-area="Admin" asp-controller="District" asp-action="Update" enctype="multipart/form-data">
+                    <input asp-for="DistrictId" name="DistrictId" type="text" class="form-control" hidden />
+
+                    <div class="row mb-3">
+                        <label class="col-sm-12 fw-bold">Tên tỉnh<span class="ms-1 text-red">*</span></label>
+                        <div class="col-sm-12">
+                            <input asp-for="Name" name="Name" type="text" class="form-control" placeholder="Nhập tên tỉnh" />
+                            <span asp-validation-for="Name" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <label class="col-sm-12 fw-bold">Tiền tố<span class="ms-1 text-red">*</span></label>
+                        <div class="col-sm-12">
+                            <textarea asp-for="Prefix" name="Prefix" type="text" class="form-control" placeholder="Nhập tiền tố"></textarea>
+                            <span asp-validation-for="Prefix" class="text-danger"></span>
+                        </div>
+                    </div>
+
+                    <div class="row mb-2">
+                        <div class="col-sm-12 d-flex flex-row justify-content-start">
+                            <a asp-area="Admin" asp-controller="District" asp-action="Index" class="btn btn-secondary">
+                                <i class="bi bi-arrow-left"></i>
+                                <span>Trở về</span>
+                            </a>
+                            <button onclick="showSpinner();" type="submit" class="btn btn-primary mx-2">
+                                <span id="spinner" class="visually-hidden">
+                                    <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Loading...</span>
+                                    <span>Đang xử lý</span>
+                                </span>
+                                <span id="btn-content">
+                                    <i class="bi bi-floppy"></i>
+                                    <span>Lưu</span>
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

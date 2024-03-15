@@ -4,33 +4,23 @@
 
 @{
 
-    string currentUrl = Context.Request.Path + Context.Request.QueryString;
+    UserInfo userInfo = SessionHelper.GetObject<UserInfo>(Context.Session, "UserInfo");
 
-    if (currentUrl.Contains("SignIn") || currentUrl.Contains("Register"))
+    if (userInfo?.Role != null)
     {
-        Layout = "~/Views/Shared/Layouts/_BlankLayout.cshtml";
+        Role role = (Role)userInfo.RoleNumber;
+        switch (role)
+        {
+            case Role.Admin:
+                Layout = "~/Views/Shared/Layouts/_AdminLayout.cshtml";
+                break;
+            default:
+                Layout = "~/Views/Shared/Layouts/_UserLayout.cshtml";
+                break;
+        }
     }
     else
     {
-
-        UserInfo userInfo = SessionHelper.GetObject<UserInfo>(Context.Session, "UserInfo");
-
-        if (userInfo?.Role != null)
-        {
-            Role role = (Role)userInfo.RoleNumber;
-            switch (role)
-            {
-                case Role.Admin:
-                    Layout = "~/Views/Shared/Layouts/_AdminLayout.cshtml";
-                    break;
-                default:
-                    Layout = "~/Views/Shared/Layouts/_StudentLayout.cshtml";
-                    break;
-            }
-        }
-        else
-        {
-            Layout = "~/Views/Shared/Layouts/_Layout.cshtml";
-        }
+        Layout = "~/Views/Shared/Layouts/_Layout.cshtml";
     }
 }
