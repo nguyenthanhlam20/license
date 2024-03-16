@@ -3,28 +3,60 @@
   "WorkspaceRootPath": "C:\\Users\\ADMIN\\Downloads\\license\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ADMIN\\Downloads\\license\\DataAccess\\Migrations\\20240316054856_Migrations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:DataAccess\\Migrations\\20240316054856_Migrations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58652D0B-3A12-49DC-8202-1D325067FD0C}|WebClient\\WebClient.csproj|c:\\users\\admin\\downloads\\license\\webclient\\wwwroot\\css\\shared.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{58652D0B-3A12-49DC-8202-1D325067FD0C}|WebClient\\WebClient.csproj|solutionrelative:webclient\\wwwroot\\css\\shared.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58652D0B-3A12-49DC-8202-1D325067FD0C}|WebClient\\WebClient.csproj|c:\\users\\admin\\downloads\\license\\webclient\\wwwroot\\css\\variables.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{58652D0B-3A12-49DC-8202-1D325067FD0C}|WebClient\\WebClient.csproj|solutionrelative:webclient\\wwwroot\\css\\variables.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FED65DB7-781F-422B-8889-631889C49A16}|DataAccess\\DataAccess.csproj|c:\\users\\admin\\downloads\\license\\dataaccess\\seeding\\accountseeder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FED65DB7-781F-422B-8889-631889C49A16}|DataAccess\\DataAccess.csproj|solutionrelative:dataaccess\\seeding\\accountseeder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58652D0B-3A12-49DC-8202-1D325067FD0C}|WebClient\\WebClient.csproj|c:\\users\\admin\\downloads\\license\\webclient\\areas\\user\\views\\district\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{58652D0B-3A12-49DC-8202-1D325067FD0C}|WebClient\\WebClient.csproj|solutionrelative:webclient\\areas\\user\\views\\district\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58652D0B-3A12-49DC-8202-1D325067FD0C}|WebClient\\WebClient.csproj|c:\\users\\admin\\downloads\\license\\webclient\\controllers\\authencontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{58652D0B-3A12-49DC-8202-1D325067FD0C}|WebClient\\WebClient.csproj|solutionrelative:webclient\\controllers\\authencontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58652D0B-3A12-49DC-8202-1D325067FD0C}|WebClient\\WebClient.csproj|c:\\users\\admin\\downloads\\license\\webclient\\areas\\admin\\views\\licenseplate\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{58652D0B-3A12-49DC-8202-1D325067FD0C}|WebClient\\WebClient.csproj|solutionrelative:webclient\\areas\\admin\\views\\licenseplate\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58652D0B-3A12-49DC-8202-1D325067FD0C}|WebClient\\WebClient.csproj|c:\\users\\admin\\downloads\\license\\webclient\\views\\shared\\layouts\\_adminlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{58652D0B-3A12-49DC-8202-1D325067FD0C}|WebClient\\WebClient.csproj|solutionrelative:webclient\\views\\shared\\layouts\\_adminlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58652D0B-3A12-49DC-8202-1D325067FD0C}|WebClient\\WebClient.csproj|c:\\users\\admin\\downloads\\license\\webclient\\views\\error\\error404.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{58652D0B-3A12-49DC-8202-1D325067FD0C}|WebClient\\WebClient.csproj|solutionrelative:webclient\\views\\error\\error404.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58652D0B-3A12-49DC-8202-1D325067FD0C}|WebClient\\WebClient.csproj|c:\\users\\admin\\downloads\\license\\webclient\\views\\error\\error403.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{58652D0B-3A12-49DC-8202-1D325067FD0C}|WebClient\\WebClient.csproj|solutionrelative:webclient\\views\\error\\error403.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58652D0B-3A12-49DC-8202-1D325067FD0C}|WebClient\\WebClient.csproj|c:\\users\\admin\\downloads\\license\\webclient\\areas\\user\\controllers\\mylicenseplatecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{58652D0B-3A12-49DC-8202-1D325067FD0C}|WebClient\\WebClient.csproj|solutionrelative:webclient\\areas\\user\\controllers\\mylicenseplatecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{58652D0B-3A12-49DC-8202-1D325067FD0C}|WebClient\\WebClient.csproj|c:\\users\\admin\\downloads\\license\\webclient\\areas\\user\\controllers\\licenseplatecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{58652D0B-3A12-49DC-8202-1D325067FD0C}|WebClient\\WebClient.csproj|solutionrelative:webclient\\areas\\user\\controllers\\licenseplatecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{58652D0B-3A12-49DC-8202-1D325067FD0C}|WebClient\\WebClient.csproj|c:\\users\\admin\\downloads\\license\\webclient\\areas\\user\\views\\licenseplate\\congrats.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{58652D0B-3A12-49DC-8202-1D325067FD0C}|WebClient\\WebClient.csproj|solutionrelative:webclient\\areas\\user\\views\\licenseplate\\congrats.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{58652D0B-3A12-49DC-8202-1D325067FD0C}|WebClient\\WebClient.csproj|c:\\users\\admin\\downloads\\license\\webclient\\areas\\user\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{58652D0B-3A12-49DC-8202-1D325067FD0C}|WebClient\\WebClient.csproj|solutionrelative:webclient\\areas\\user\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{58652D0B-3A12-49DC-8202-1D325067FD0C}|WebClient\\WebClient.csproj|c:\\users\\admin\\downloads\\license\\webclient\\areas\\user\\views\\licenseplate\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{58652D0B-3A12-49DC-8202-1D325067FD0C}|WebClient\\WebClient.csproj|solutionrelative:webclient\\areas\\user\\views\\licenseplate\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F92C9C33-A341-427F-86CE-75A744D496B8}|Repositories\\Repositories.csproj|c:\\users\\admin\\downloads\\license\\repositories\\licenseplates\\licenseplaterepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F92C9C33-A341-427F-86CE-75A744D496B8}|Repositories\\Repositories.csproj|solutionrelative:repositories\\licenseplates\\licenseplaterepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5FDE0D26-E3F0-4F0B-B313-3E4F0C1B9CC8}|WebApi\\WebApi.csproj|c:\\users\\admin\\downloads\\license\\webapi\\controllers\\user\\licenseplatecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5FDE0D26-E3F0-4F0B-B313-3E4F0C1B9CC8}|WebApi\\WebApi.csproj|solutionrelative:webapi\\controllers\\user\\licenseplatecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F92C9C33-A341-427F-86CE-75A744D496B8}|Repositories\\Repositories.csproj|c:\\users\\admin\\downloads\\license\\repositories\\licenseplates\\ilicenseplaterepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F92C9C33-A341-427F-86CE-75A744D496B8}|Repositories\\Repositories.csproj|solutionrelative:repositories\\licenseplates\\ilicenseplaterepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{58652D0B-3A12-49DC-8202-1D325067FD0C}|WebClient\\WebClient.csproj|c:\\users\\admin\\downloads\\license\\webclient\\areas\\user\\controllers\\districtcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{58652D0B-3A12-49DC-8202-1D325067FD0C}|WebClient\\WebClient.csproj|solutionrelative:webclient\\areas\\user\\controllers\\districtcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,7 +66,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 73,
+          "SelectedChildIndex": 71,
           "Children": [
             {
               "$type": "Bookmark",
@@ -322,80 +354,184 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Create.cshtml",
-              "DocumentMoniker": "C:\\Users\\ADMIN\\Downloads\\license\\WebClient\\Areas\\User\\Views\\LicensePlate\\Create.cshtml",
-              "RelativeDocumentMoniker": "WebClient\\Areas\\User\\Views\\LicensePlate\\Create.cshtml",
-              "ToolTip": "C:\\Users\\ADMIN\\Downloads\\license\\WebClient\\Areas\\User\\Views\\LicensePlate\\Create.cshtml",
-              "RelativeToolTip": "WebClient\\Areas\\User\\Views\\LicensePlate\\Create.cshtml",
-              "ViewState": "AQIAADAAAAAAAAAAAAAAADoAAAAWAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-03-15T19:37:41.846Z",
+              "DocumentIndex": 0,
+              "Title": "20240316054856_Migrations.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\Downloads\\license\\DataAccess\\Migrations\\20240316054856_Migrations.cs",
+              "RelativeDocumentMoniker": "DataAccess\\Migrations\\20240316054856_Migrations.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\Downloads\\license\\DataAccess\\Migrations\\20240316054856_Migrations.cs",
+              "RelativeToolTip": "DataAccess\\Migrations\\20240316054856_Migrations.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-16T05:48:56.347Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Congrats.cshtml",
-              "DocumentMoniker": "C:\\Users\\ADMIN\\Downloads\\license\\WebClient\\Areas\\User\\Views\\LicensePlate\\Congrats.cshtml",
-              "RelativeDocumentMoniker": "WebClient\\Areas\\User\\Views\\LicensePlate\\Congrats.cshtml",
-              "ToolTip": "C:\\Users\\ADMIN\\Downloads\\license\\WebClient\\Areas\\User\\Views\\LicensePlate\\Congrats.cshtml",
-              "RelativeToolTip": "WebClient\\Areas\\User\\Views\\LicensePlate\\Congrats.cshtml",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAABkAAAAGAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-03-15T19:37:30.89Z",
+              "Title": "shared.css",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\Downloads\\license\\WebClient\\wwwroot\\css\\shared.css",
+              "RelativeDocumentMoniker": "WebClient\\wwwroot\\css\\shared.css",
+              "ToolTip": "C:\\Users\\ADMIN\\Downloads\\license\\WebClient\\wwwroot\\css\\shared.css",
+              "RelativeToolTip": "WebClient\\wwwroot\\css\\shared.css",
+              "ViewState": "AQIAAIAHAAAAAAAAAAAWwJEHAAAhAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-03-16T05:46:52.884Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "LicensePlateController.cs",
-              "DocumentMoniker": "C:\\Users\\ADMIN\\Downloads\\license\\WebClient\\Areas\\User\\Controllers\\LicensePlateController.cs",
-              "RelativeDocumentMoniker": "WebClient\\Areas\\User\\Controllers\\LicensePlateController.cs",
-              "ToolTip": "C:\\Users\\ADMIN\\Downloads\\license\\WebClient\\Areas\\User\\Controllers\\LicensePlateController.cs",
-              "RelativeToolTip": "WebClient\\Areas\\User\\Controllers\\LicensePlateController.cs",
-              "ViewState": "AQIAAD0AAAAAAAAAAAAowDEAAAAzAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-15T19:33:32.411Z",
+              "DocumentIndex": 2,
+              "Title": "variables.css",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\Downloads\\license\\WebClient\\wwwroot\\css\\variables.css",
+              "RelativeDocumentMoniker": "WebClient\\wwwroot\\css\\variables.css",
+              "ToolTip": "C:\\Users\\ADMIN\\Downloads\\license\\WebClient\\wwwroot\\css\\variables.css",
+              "RelativeToolTip": "WebClient\\wwwroot\\css\\variables.css",
+              "ViewState": "AQIAABIAAAAAAAAAAAAAACcAAAAbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-03-16T05:45:16.606Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "LicensePlateRepository.cs",
-              "DocumentMoniker": "C:\\Users\\ADMIN\\Downloads\\license\\Repositories\\LicensePlates\\LicensePlateRepository.cs",
-              "RelativeDocumentMoniker": "Repositories\\LicensePlates\\LicensePlateRepository.cs",
-              "ToolTip": "C:\\Users\\ADMIN\\Downloads\\license\\Repositories\\LicensePlates\\LicensePlateRepository.cs",
-              "RelativeToolTip": "Repositories\\LicensePlates\\LicensePlateRepository.cs",
-              "ViewState": "AQIAAC0AAAAAAAAAAAAcwDwAAAAAAAAA",
+              "Title": "AccountSeeder.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\Downloads\\license\\DataAccess\\Seeding\\AccountSeeder.cs",
+              "RelativeDocumentMoniker": "DataAccess\\Seeding\\AccountSeeder.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\Downloads\\license\\DataAccess\\Seeding\\AccountSeeder.cs",
+              "RelativeToolTip": "DataAccess\\Seeding\\AccountSeeder.cs",
+              "ViewState": "AQIAADUAAAAAAAAAAAAuwEQAAAAUAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-15T19:23:55.355Z",
+              "WhenOpened": "2024-03-16T05:43:52.416Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "LicensePlateController.cs",
-              "DocumentMoniker": "C:\\Users\\ADMIN\\Downloads\\license\\WebApi\\Controllers\\User\\LicensePlateController.cs",
-              "RelativeDocumentMoniker": "WebApi\\Controllers\\User\\LicensePlateController.cs",
-              "ToolTip": "C:\\Users\\ADMIN\\Downloads\\license\\WebApi\\Controllers\\User\\LicensePlateController.cs",
-              "RelativeToolTip": "WebApi\\Controllers\\User\\LicensePlateController.cs",
-              "ViewState": "AQIAABoAAAAAAAAAAAAiwCMAAAA4AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-15T19:23:41.963Z",
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\Downloads\\license\\WebClient\\Areas\\User\\Views\\District\\Index.cshtml",
+              "RelativeDocumentMoniker": "WebClient\\Areas\\User\\Views\\District\\Index.cshtml",
+              "ToolTip": "C:\\Users\\ADMIN\\Downloads\\license\\WebClient\\Areas\\User\\Views\\District\\Index.cshtml",
+              "RelativeToolTip": "WebClient\\Areas\\User\\Views\\District\\Index.cshtml",
+              "ViewState": "AQIAABUAAAAAAAAAAAAAACIAAAAmAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-03-16T05:42:04.49Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "ILicensePlateRepository.cs",
-              "DocumentMoniker": "C:\\Users\\ADMIN\\Downloads\\license\\Repositories\\LicensePlates\\ILicensePlateRepository.cs",
-              "RelativeDocumentMoniker": "Repositories\\LicensePlates\\ILicensePlateRepository.cs",
-              "ToolTip": "C:\\Users\\ADMIN\\Downloads\\license\\Repositories\\LicensePlates\\ILicensePlateRepository.cs",
-              "RelativeToolTip": "Repositories\\LicensePlates\\ILicensePlateRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAuwAsAAAAaAAAA",
+              "Title": "AuthenController.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\Downloads\\license\\WebClient\\Controllers\\AuthenController.cs",
+              "RelativeDocumentMoniker": "WebClient\\Controllers\\AuthenController.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\Downloads\\license\\WebClient\\Controllers\\AuthenController.cs",
+              "RelativeToolTip": "WebClient\\Controllers\\AuthenController.cs",
+              "ViewState": "AQIAAJ8AAAAAAAAAAAAowG0AAABLAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-15T19:21:28.94Z",
+              "WhenOpened": "2024-03-16T05:39:45.419Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\Downloads\\license\\WebClient\\Areas\\Admin\\Views\\LicensePlate\\Index.cshtml",
+              "RelativeDocumentMoniker": "WebClient\\Areas\\Admin\\Views\\LicensePlate\\Index.cshtml",
+              "ToolTip": "C:\\Users\\ADMIN\\Downloads\\license\\WebClient\\Areas\\Admin\\Views\\LicensePlate\\Index.cshtml",
+              "RelativeToolTip": "WebClient\\Areas\\Admin\\Views\\LicensePlate\\Index.cshtml",
+              "ViewState": "AQIAADMAAAAAAAAAAAAAAD4AAAAoAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-03-16T05:39:03.799Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "_AdminLayout.cshtml",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\Downloads\\license\\WebClient\\Views\\Shared\\Layouts\\_AdminLayout.cshtml",
+              "RelativeDocumentMoniker": "WebClient\\Views\\Shared\\Layouts\\_AdminLayout.cshtml",
+              "ToolTip": "C:\\Users\\ADMIN\\Downloads\\license\\WebClient\\Views\\Shared\\Layouts\\_AdminLayout.cshtml",
+              "RelativeToolTip": "WebClient\\Views\\Shared\\Layouts\\_AdminLayout.cshtml",
+              "ViewState": "AQIAAEgAAAAAAAAAAAAAAE0AAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-03-16T05:38:37.932Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Error404.cshtml",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\Downloads\\license\\WebClient\\Views\\Error\\Error404.cshtml",
+              "RelativeDocumentMoniker": "WebClient\\Views\\Error\\Error404.cshtml",
+              "ToolTip": "C:\\Users\\ADMIN\\Downloads\\license\\WebClient\\Views\\Error\\Error404.cshtml",
+              "RelativeToolTip": "WebClient\\Views\\Error\\Error404.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAA8AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-03-16T05:36:05.327Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Error403.cshtml",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\Downloads\\license\\WebClient\\Views\\Error\\Error403.cshtml",
+              "RelativeDocumentMoniker": "WebClient\\Views\\Error\\Error403.cshtml",
+              "ToolTip": "C:\\Users\\ADMIN\\Downloads\\license\\WebClient\\Views\\Error\\Error403.cshtml",
+              "RelativeToolTip": "WebClient\\Views\\Error\\Error403.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-03-16T05:35:43.401Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "MyLicensePlateController.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\Downloads\\license\\WebClient\\Areas\\User\\Controllers\\MyLicensePlateController.cs",
+              "RelativeDocumentMoniker": "WebClient\\Areas\\User\\Controllers\\MyLicensePlateController.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\Downloads\\license\\WebClient\\Areas\\User\\Controllers\\MyLicensePlateController.cs",
+              "RelativeToolTip": "WebClient\\Areas\\User\\Controllers\\MyLicensePlateController.cs",
+              "ViewState": "AQIAABwAAAAAAAAAAAAQwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-16T05:35:31.22Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "LicensePlateController.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\Downloads\\license\\WebClient\\Areas\\User\\Controllers\\LicensePlateController.cs",
+              "RelativeDocumentMoniker": "WebClient\\Areas\\User\\Controllers\\LicensePlateController.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\Downloads\\license\\WebClient\\Areas\\User\\Controllers\\LicensePlateController.cs",
+              "RelativeToolTip": "WebClient\\Areas\\User\\Controllers\\LicensePlateController.cs",
+              "ViewState": "AQIAADsAAAAAAAAAAAAgwEwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-16T05:35:12.369Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\Downloads\\license\\WebClient\\Areas\\User\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "WebClient\\Areas\\User\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\Downloads\\license\\WebClient\\Areas\\User\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "WebClient\\Areas\\User\\Controllers\\HomeController.cs",
+              "ViewState": "AQIAACEAAAAAAAAAAAAYwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-16T05:35:10.083Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "DistrictController.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\Downloads\\license\\WebClient\\Areas\\User\\Controllers\\DistrictController.cs",
+              "RelativeDocumentMoniker": "WebClient\\Areas\\User\\Controllers\\DistrictController.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\Downloads\\license\\WebClient\\Areas\\User\\Controllers\\DistrictController.cs",
+              "RelativeToolTip": "WebClient\\Areas\\User\\Controllers\\DistrictController.cs",
+              "ViewState": "AQIAACcAAAAAAAAAAAAYwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-16T05:35:07.265Z",
               "EditorCaption": ""
             }
           ]

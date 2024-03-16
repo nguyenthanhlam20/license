@@ -88,13 +88,13 @@ namespace WebApi.Controllers
                     await _emailService.SendHtmlEmailAsync(request.Email, Subject, Body);
 
 
-                    response.Message = "Create student successful";
+                    response.Message = "Đăng ký tài khoản thành công";
 
                     return Ok(response);
                 }
                 else
                 {
-                    throw new Exception("Register failed");
+                    throw new Exception("Đăng ký tài khoản thất bại");
                 }
 
             }

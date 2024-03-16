@@ -26,7 +26,7 @@ namespace Repositories.LicensePlates
             }
             catch (Exception e)
             {
-                Console.WriteLine($"Error: {e.Message}");
+                Console.WriteLine($"Error: {e.ToString()}");
             }
             return false;
         }
@@ -35,7 +35,7 @@ namespace Repositories.LicensePlates
         {
             try
             {
-                LicensePlate existed = new();
+                LicensePlate? existed = new();
                 List<LicensePlate> query = await _context.LicensePlates.Where(x => x.DistrictId == licensePlate.DistrictId
                   && x.SeriesId == licensePlate.SeriesId).ToListAsync();
 
@@ -48,7 +48,7 @@ namespace Repositories.LicensePlates
                     randomNumber = rnd.Next(10000, 100000);
                     existed = query.FirstOrDefault(x => x.Number == randomNumber);
 
-                    if (existed != null)
+                    if (existed == null)
                     {
                         break;
                     }
@@ -58,7 +58,7 @@ namespace Repositories.LicensePlates
             }
             catch (Exception e)
             {
-                Console.WriteLine($"Error: {e.Message}");
+                Console.WriteLine($"Error: {e.ToString()}");
                 return 0;
             }
         }
@@ -82,7 +82,7 @@ namespace Repositories.LicensePlates
         {
             try
             {
-                var query = await _context.LicensePlates.ToListAsync();
+                var query = await _context.LicensePlates.Include(x => x.Account).Include(x => x.District).ToListAsync();
                 if (!String.IsNullOrEmpty(request.SearchTerm))
                 {
                     query = query.Where(c => c.LicensePlateNumber.ToLower().Contains(request.SearchTerm)).ToList();

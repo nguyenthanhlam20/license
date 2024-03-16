@@ -1584,30 +1584,6 @@ section {
 
 
 /*--------------------------------------------------------------
-# paging
---------------------------------------------------------------*/
-/*.active {
-    z-index: 3;
-}
-*/
-.link-paging {
-    background-color: white;
-    color: var(--secondary-text-color);
-}
-
-    .link-paging:hover {
-        background-color: #ff6533;
-        color: white;
-    }
-
-.page-item.link-active .link-paging {
-    background-color: #ff6533;
-    color: white;
-}
-
-
-
-/*--------------------------------------------------------------
 # Loader-container
 --------------------------------------------------------------*/
 

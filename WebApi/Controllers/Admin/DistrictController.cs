@@ -2,10 +2,10 @@
 using DataAccess.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Repositories.Districts;
 using ViewModels;
 using ViewModels.Districts;
 using ViewModels.Paging;
-using Repositories.Districts;
 
 namespace WebApi.Controllers.Admin
 {
@@ -73,26 +73,15 @@ namespace WebApi.Controllers.Admin
         {
             try
             {
-                if (districtVM == null)
-                {
-                    throw new Exception("Didn't recieved district information");
-                }
-
-                bool isExisted = await _repository.IsExistedDistrict(districtVM.DistrictId ?? 0, districtVM.Name);
-                if (isExisted)
-                {
-                    throw new Exception($"District with the name '{districtVM.Name}' existed!");
-                }
-
                 var district = _mapper.Map<District>(districtVM);
 
                 bool status = await _repository.UpdateDistrict(district);
                 if (!status)
                 {
-                    throw new Exception("Update district failed!");
+                    throw new Exception("Cập nhật tỉnh thất bại.");
                 }
 
-                return Ok(new ResponseVM() { Status = true, Message = "Update district successful!" });
+                return Ok(new ResponseVM() { Status = true, Message = "Cập nhật tỉnh thành công." });
             }
             catch (Exception ex)
             {
@@ -105,26 +94,14 @@ namespace WebApi.Controllers.Admin
         {
             try
             {
-                if (districtVM == null)
-                {
-                    throw new Exception("Didn't recieved district information");
-                }
-                // check exist campus
                 var district = _mapper.Map<District>(districtVM);
-                bool isExisted = await _repository.IsExistedDistrict(districtVM.DistrictId ?? 0, districtVM.Name);
-                if (isExisted)
-                {
-                    throw new Exception($"District with the name '{districtVM.Name}' existed!");
-                }
-
-                //add new campus
                 bool status = await _repository.AddDistrict(district);
                 if (!status)
                 {
-                    throw new Exception("Add district failed!");
+                    throw new Exception("Thêm mới tỉnh thất bại.");
                 }
 
-                return Ok(new ResponseVM() { Status = true, Message = "Add district successful!" });
+                return Ok(new ResponseVM() { Status = true, Message = "Thêm mới tỉnh thành công." });
             }
             catch (Exception ex)
             {

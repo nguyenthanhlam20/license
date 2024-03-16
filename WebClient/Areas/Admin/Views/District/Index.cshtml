@@ -15,7 +15,7 @@
     int endIndex = startIndex + pageSize - 1;
     if (endIndex > totalRecord) endIndex = totalRecord;
 
-    int ordinalNumber = 1;
+    int ordinalNumber = startIndex;
 }
 
 <div class="pagetitle">
@@ -85,7 +85,7 @@
                     {
                         <ul class="pagination justify-content-end col">
                             <li class="page-item @((currentPage == 1) ? "disabled" : "")">
-                                <a class="page-link link-paging" href="?currentPage=@(currentPage-1)" tabindex="-1" aria-disabled="true">Previous</a>
+                                <a class="page-link link-paging" href="?currentPage=@(currentPage-1)" tabindex="-1" aria-disabled="true">Trước</a>
                             </li>
 
                             @if (currentPage > 3)
@@ -106,7 +106,7 @@
                             }
 
                             <li class="page-item @((currentPage == totalPages) ? "disabled" : "")">
-                                <a class="page-link link-paging" href="?currentPage=@(currentPage+1)">Next</a>
+                                <a class="page-link link-paging" href="?currentPage=@(currentPage+1)">Tiếp</a>
                             </li>
                         </ul>
 

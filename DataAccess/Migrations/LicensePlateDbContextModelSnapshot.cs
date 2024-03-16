@@ -107,61 +107,61 @@ namespace DataAccess.Migrations
                         {
                             Id = new Guid("b8c777a9-55b9-4b3d-860a-d7b56e4c24b7"),
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "c290a0f3-b8c1-49c8-8bc2-0a473ec9bf98",
+                            ConcurrencyStamp = "2284ca88-3d89-4c2e-a387-df1cf4a91629",
                             Email = "admin@gmail.com",
                             EmailConfirmed = true,
                             Fullname = "Admin",
                             IsAccountActive = true,
-                            JoinedDate = new DateTime(2024, 3, 16, 2, 8, 20, 268, DateTimeKind.Local).AddTicks(978),
+                            JoinedDate = new DateTime(2024, 3, 16, 12, 48, 55, 997, DateTimeKind.Local).AddTicks(1423),
                             LockoutEnabled = false,
                             NormalizedEmail = "ADMIN@GMAIL.COM",
                             NormalizedUserName = "ICPDPHN",
                             Password = "admin",
-                            PasswordHash = "AQAAAAEAACcQAAAAELTlLPonrkGKhL2bAf0RWr/tmaxWrKFkT9jFt4PHzIPLVBWIrLlqUQaDYHqCfFUioA==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEGuPvqA1sl30Ji91oTy+7aAaquU9y7lpfzVi4wzs0AB+2TCZ3mN1DHcWZaz2JIccDg==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "651e47b5-8450-4e2f-a613-e363ab4ca03a",
+                            SecurityStamp = "f5ba40b7-a850-44ed-9e50-521500d8c60a",
                             TwoFactorEnabled = false,
                             UserName = "admin"
                         },
                         new
                         {
-                            Id = new Guid("34fb159a-6b96-4149-a3b4-5d1b5cc374a3"),
+                            Id = new Guid("34dd158a-6b96-4149-a3b4-5d1b5cc374a3"),
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "353f48aa-2108-4d85-9adb-cd0fe32eda2f",
-                            Email = "ductv@gmail.com",
+                            ConcurrencyStamp = "fa79770d-8ce6-4d82-a813-ea5f1c68db7e",
+                            Email = "thanhdao@gmail.com",
                             EmailConfirmed = true,
-                            Fullname = "Tran Van Duc",
+                            Fullname = "Thành Đào",
                             IsAccountActive = true,
-                            JoinedDate = new DateTime(2024, 3, 16, 2, 8, 20, 269, DateTimeKind.Local).AddTicks(4598),
+                            JoinedDate = new DateTime(2024, 3, 16, 12, 48, 55, 998, DateTimeKind.Local).AddTicks(5290),
                             LockoutEnabled = false,
-                            NormalizedEmail = "DUCTV@GMAIL.COM",
-                            NormalizedUserName = "DUCTV",
-                            Password = "ductv",
-                            PasswordHash = "AQAAAAEAACcQAAAAEHpO7+fTrIquoPKd0tkm0CuRlSdqlEcHUx35IsFvjp1gZwue5NV+9N4Ymhasxklnyg==",
+                            NormalizedEmail = "THANHDAO@GMAIL.COM",
+                            NormalizedUserName = "THANHDAO",
+                            Password = "thanhdao",
+                            PasswordHash = "AQAAAAEAACcQAAAAEIGmCmDZLxa2KiJqO7FcYbsG3a1g6APItF4QlIxOWrN+lEtR3u56KYca635D6AWV1Q==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "afcdfeae-a3c5-44ef-894a-afacc33fc7a7",
+                            SecurityStamp = "f62d5d3f-500c-439d-9b0e-dfcab1de7a72",
                             TwoFactorEnabled = false,
-                            UserName = "ductv"
+                            UserName = "thanhdao"
                         },
                         new
                         {
-                            Id = new Guid("34dd158a-6b96-4149-a3b4-5d1b5cc374a3"),
+                            Id = new Guid("48da158a-6b96-4149-a3b4-5d1b5cc374a3"),
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "56b63bf8-2954-40de-8836-8224dfd62afc",
-                            Email = "thanhdc@gmail.com",
+                            ConcurrencyStamp = "51adb867-a7e3-4343-8677-844b619c2be5",
+                            Email = "thuylinh@gmail.com",
                             EmailConfirmed = true,
-                            Fullname = "Dinh Cong Thanh",
+                            Fullname = "Thùy Linh",
                             IsAccountActive = true,
-                            JoinedDate = new DateTime(2024, 3, 16, 2, 8, 20, 270, DateTimeKind.Local).AddTicks(8384),
+                            JoinedDate = new DateTime(2024, 3, 16, 12, 48, 55, 999, DateTimeKind.Local).AddTicks(8542),
                             LockoutEnabled = false,
-                            NormalizedEmail = "THANHDC@GMAIL.COM",
-                            NormalizedUserName = "THANHDC",
-                            Password = "thanhdc",
-                            PasswordHash = "AQAAAAEAACcQAAAAENHntgeTqr4GeXwSDuS0iR001dtxd2m0KOx3IE0mvVFcbISLg9CzmqE/5Jxq8Vo5UA==",
+                            NormalizedEmail = "THUYLINH@GMAIL.COM",
+                            NormalizedUserName = "THUYLINH",
+                            Password = "thuylinh",
+                            PasswordHash = "AQAAAAEAACcQAAAAEKLxd/hsb3szFdcuPitu/H6KGbr5bTmy6vkD4FF5TaoLLbo8kUC/sEE3CI8TaP8mbg==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "19e2dec1-294d-4a65-ad6a-340cea9c630a",
+                            SecurityStamp = "4e117b6b-a332-45b9-853e-e8406ec495f4",
                             TwoFactorEnabled = false,
-                            UserName = "thanhdc"
+                            UserName = "thuylinh"
                         });
                 });
 
@@ -191,20 +191,398 @@ namespace DataAccess.Migrations
                         new
                         {
                             DistrictId = 1,
-                            Name = "Hà Nội",
-                            Prefix = "1"
+                            Name = "Cao Bằng",
+                            Prefix = "11"
                         },
                         new
                         {
                             DistrictId = 2,
-                            Name = "Hải Phòng",
-                            Prefix = "2"
+                            Name = "Lạng Sơn",
+                            Prefix = "12"
                         },
                         new
                         {
                             DistrictId = 3,
+                            Name = "Quảng Ninh",
+                            Prefix = "14"
+                        },
+                        new
+                        {
+                            DistrictId = 4,
+                            Name = "Hải Phòng",
+                            Prefix = "15"
+                        },
+                        new
+                        {
+                            DistrictId = 5,
+                            Name = "Thái Bình",
+                            Prefix = "17"
+                        },
+                        new
+                        {
+                            DistrictId = 6,
+                            Name = "Nam Định",
+                            Prefix = "18"
+                        },
+                        new
+                        {
+                            DistrictId = 7,
+                            Name = "Phú Thọ",
+                            Prefix = "19"
+                        },
+                        new
+                        {
+                            DistrictId = 8,
+                            Name = "Thái Nguyên",
+                            Prefix = "20"
+                        },
+                        new
+                        {
+                            DistrictId = 9,
+                            Name = "Yên Bái",
+                            Prefix = "21"
+                        },
+                        new
+                        {
+                            DistrictId = 10,
+                            Name = "Tuyên Quang",
+                            Prefix = "22"
+                        },
+                        new
+                        {
+                            DistrictId = 11,
+                            Name = "Hà Giang",
+                            Prefix = "23"
+                        },
+                        new
+                        {
+                            DistrictId = 12,
+                            Name = "Lào Cai",
+                            Prefix = "24"
+                        },
+                        new
+                        {
+                            DistrictId = 13,
+                            Name = "Lai Châu",
+                            Prefix = "25"
+                        },
+                        new
+                        {
+                            DistrictId = 14,
+                            Name = "Sơn La",
+                            Prefix = "26"
+                        },
+                        new
+                        {
+                            DistrictId = 15,
+                            Name = "Điện Biên",
+                            Prefix = "27"
+                        },
+                        new
+                        {
+                            DistrictId = 16,
+                            Name = "Hòa Bình",
+                            Prefix = "28"
+                        },
+                        new
+                        {
+                            DistrictId = 17,
+                            Name = "Hà Nội",
+                            Prefix = "29"
+                        },
+                        new
+                        {
+                            DistrictId = 18,
                             Name = "Hải Dương",
-                            Prefix = "3"
+                            Prefix = "34"
+                        },
+                        new
+                        {
+                            DistrictId = 19,
+                            Name = "Ninh Bình",
+                            Prefix = "35"
+                        },
+                        new
+                        {
+                            DistrictId = 20,
+                            Name = "Thanh Hóa",
+                            Prefix = "36"
+                        },
+                        new
+                        {
+                            DistrictId = 21,
+                            Name = "Nghệ An",
+                            Prefix = "37"
+                        },
+                        new
+                        {
+                            DistrictId = 22,
+                            Name = "Hà Tĩnh",
+                            Prefix = "38"
+                        },
+                        new
+                        {
+                            DistrictId = 23,
+                            Name = "TP. Đà Nẵng",
+                            Prefix = "43"
+                        },
+                        new
+                        {
+                            DistrictId = 24,
+                            Name = "Đắk Lắk",
+                            Prefix = "47"
+                        },
+                        new
+                        {
+                            DistrictId = 25,
+                            Name = "Đắk Nông",
+                            Prefix = "48"
+                        },
+                        new
+                        {
+                            DistrictId = 26,
+                            Name = "Lâm Đồng",
+                            Prefix = "49"
+                        },
+                        new
+                        {
+                            DistrictId = 27,
+                            Name = "Tp. Hồ Chí Minh",
+                            Prefix = "41"
+                        },
+                        new
+                        {
+                            DistrictId = 28,
+                            Name = "Đồng Nai",
+                            Prefix = "39, 60"
+                        },
+                        new
+                        {
+                            DistrictId = 29,
+                            Name = "Bình Dương",
+                            Prefix = "61"
+                        },
+                        new
+                        {
+                            DistrictId = 30,
+                            Name = "Long An",
+                            Prefix = "62"
+                        },
+                        new
+                        {
+                            DistrictId = 31,
+                            Name = "Tiền Giang",
+                            Prefix = "63"
+                        },
+                        new
+                        {
+                            DistrictId = 32,
+                            Name = "Vĩnh Long",
+                            Prefix = "64"
+                        },
+                        new
+                        {
+                            DistrictId = 33,
+                            Name = "Cần Thơ",
+                            Prefix = "65"
+                        },
+                        new
+                        {
+                            DistrictId = 34,
+                            Name = "Đồng Tháp",
+                            Prefix = "66"
+                        },
+                        new
+                        {
+                            DistrictId = 35,
+                            Name = "An Giang",
+                            Prefix = "67"
+                        },
+                        new
+                        {
+                            DistrictId = 36,
+                            Name = "Kiên Giang",
+                            Prefix = "68"
+                        },
+                        new
+                        {
+                            DistrictId = 37,
+                            Name = "Cà Mau",
+                            Prefix = "69"
+                        },
+                        new
+                        {
+                            DistrictId = 38,
+                            Name = "Tây Ninh",
+                            Prefix = "70"
+                        },
+                        new
+                        {
+                            DistrictId = 39,
+                            Name = "Bến Tre",
+                            Prefix = "71"
+                        },
+                        new
+                        {
+                            DistrictId = 40,
+                            Name = "Bà Rịa - Vũng Tàu",
+                            Prefix = "72"
+                        },
+                        new
+                        {
+                            DistrictId = 41,
+                            Name = "Quảng Bình",
+                            Prefix = "73"
+                        },
+                        new
+                        {
+                            DistrictId = 42,
+                            Name = "Quảng Trị",
+                            Prefix = "74"
+                        },
+                        new
+                        {
+                            DistrictId = 43,
+                            Name = "Thừa Thiên Huế",
+                            Prefix = "75"
+                        },
+                        new
+                        {
+                            DistrictId = 44,
+                            Name = "Quảng Ngãi",
+                            Prefix = "76"
+                        },
+                        new
+                        {
+                            DistrictId = 45,
+                            Name = "Bình Định",
+                            Prefix = "77"
+                        },
+                        new
+                        {
+                            DistrictId = 46,
+                            Name = "Phú Yên",
+                            Prefix = "78"
+                        },
+                        new
+                        {
+                            DistrictId = 47,
+                            Name = "Khánh Hòa",
+                            Prefix = "79"
+                        },
+                        new
+                        {
+                            DistrictId = 48,
+                            Name = "Gia Lai",
+                            Prefix = "81"
+                        },
+                        new
+                        {
+                            DistrictId = 49,
+                            Name = "Kon Tum",
+                            Prefix = "82"
+                        },
+                        new
+                        {
+                            DistrictId = 50,
+                            Name = "Sóc Trăng",
+                            Prefix = "83"
+                        },
+                        new
+                        {
+                            DistrictId = 51,
+                            Name = "Trà Vinh",
+                            Prefix = "84"
+                        },
+                        new
+                        {
+                            DistrictId = 52,
+                            Name = "Ninh Thuận",
+                            Prefix = "85"
+                        },
+                        new
+                        {
+                            DistrictId = 53,
+                            Name = "Bình Thuận",
+                            Prefix = "86"
+                        },
+                        new
+                        {
+                            DistrictId = 54,
+                            Name = "Vĩnh Phúc",
+                            Prefix = "88"
+                        },
+                        new
+                        {
+                            DistrictId = 55,
+                            Name = "Hưng Yên",
+                            Prefix = "89"
+                        },
+                        new
+                        {
+                            DistrictId = 56,
+                            Name = "Hà Nam",
+                            Prefix = "90"
+                        },
+                        new
+                        {
+                            DistrictId = 57,
+                            Name = "Quảng Nam",
+                            Prefix = "92"
+                        },
+                        new
+                        {
+                            DistrictId = 58,
+                            Name = "Bình Phước",
+                            Prefix = "93"
+                        },
+                        new
+                        {
+                            DistrictId = 59,
+                            Name = "Bạc Liêu",
+                            Prefix = "94"
+                        },
+                        new
+                        {
+                            DistrictId = 60,
+                            Name = "Hậu Giang",
+                            Prefix = "95"
+                        },
+                        new
+                        {
+                            DistrictId = 61,
+                            Name = "Bắc Cạn",
+                            Prefix = "97"
+                        },
+                        new
+                        {
+                            DistrictId = 62,
+                            Name = "Bắc Giang",
+                            Prefix = "98"
+                        },
+                        new
+                        {
+                            DistrictId = 63,
+                            Name = "Bắc Ninh",
+                            Prefix = "99"
+                        },
+                        new
+                        {
+                            DistrictId = 64,
+                            Name = "Hải Phòng",
+                            Prefix = "16"
+                        },
+                        new
+                        {
+                            DistrictId = 65,
+                            Name = "Hà Nội",
+                            Prefix = "33"
+                        },
+                        new
+                        {
+                            DistrictId = 66,
+                            Name = "Hà Nội",
+                            Prefix = "40"
                         });
                 });
 
@@ -271,37 +649,158 @@ namespace DataAccess.Migrations
                         new
                         {
                             SeriId = 1,
+                            Description = "Cấp cho xe của doanh nghiệp, Ban quản lý dự án thuộc doanh nghiệp, các tổ chức xã hội, xã hội – nghề nghiệp, xe của đơn vị sự nghiệp ngoài công lập, xe của Trung tâm đào tạo sát hạch lái xe công lập, xe của cá nhân",
                             Title = "A"
                         },
                         new
                         {
                             SeriId = 2,
+                            Description = "Cấp cho xe của doanh nghiệp, Ban quản lý dự án thuộc doanh nghiệp, các tổ chức xã hội, xã hội – nghề nghiệp, xe của đơn vị sự nghiệp ngoài công lập, xe của Trung tâm đào tạo sát hạch lái xe công lập, xe của cá nhân",
                             Title = "B"
                         },
                         new
                         {
                             SeriId = 3,
+                            Description = "Cấp cho xe của doanh nghiệp, Ban quản lý dự án thuộc doanh nghiệp, các tổ chức xã hội, xã hội – nghề nghiệp, xe của đơn vị sự nghiệp ngoài công lập, xe của Trung tâm đào tạo sát hạch lái xe công lập, xe của cá nhân",
                             Title = "C"
                         },
                         new
                         {
                             SeriId = 4,
+                            Description = "Cấp cho xe của doanh nghiệp, Ban quản lý dự án thuộc doanh nghiệp, các tổ chức xã hội, xã hội – nghề nghiệp, xe của đơn vị sự nghiệp ngoài công lập, xe của Trung tâm đào tạo sát hạch lái xe công lập, xe của cá nhân",
                             Title = "D"
                         },
                         new
                         {
                             SeriId = 5,
+                            Description = "Cấp cho xe của doanh nghiệp, Ban quản lý dự án thuộc doanh nghiệp, các tổ chức xã hội, xã hội – nghề nghiệp, xe của đơn vị sự nghiệp ngoài công lập, xe của Trung tâm đào tạo sát hạch lái xe công lập, xe của cá nhân",
                             Title = "E"
                         },
                         new
                         {
                             SeriId = 6,
+                            Description = "Cấp cho xe của doanh nghiệp, Ban quản lý dự án thuộc doanh nghiệp, các tổ chức xã hội, xã hội – nghề nghiệp, xe của đơn vị sự nghiệp ngoài công lập, xe của Trung tâm đào tạo sát hạch lái xe công lập, xe của cá nhân",
                             Title = "F"
                         },
                         new
                         {
                             SeriId = 7,
+                            Description = "Cấp cho xe của doanh nghiệp, Ban quản lý dự án thuộc doanh nghiệp, các tổ chức xã hội, xã hội – nghề nghiệp, xe của đơn vị sự nghiệp ngoài công lập, xe của Trung tâm đào tạo sát hạch lái xe công lập, xe của cá nhân",
                             Title = "G"
+                        },
+                        new
+                        {
+                            SeriId = 8,
+                            Description = "Cấp cho xe của doanh nghiệp, Ban quản lý dự án thuộc doanh nghiệp, các tổ chức xã hội, xã hội – nghề nghiệp, xe của đơn vị sự nghiệp ngoài công lập, xe của Trung tâm đào tạo sát hạch lái xe công lập, xe của cá nhân",
+                            Title = "H"
+                        },
+                        new
+                        {
+                            SeriId = 9,
+                            Description = "Cấp cho xe của doanh nghiệp, Ban quản lý dự án thuộc doanh nghiệp, các tổ chức xã hội, xã hội – nghề nghiệp, xe của đơn vị sự nghiệp ngoài công lập, xe của Trung tâm đào tạo sát hạch lái xe công lập, xe của cá nhân",
+                            Title = "I"
+                        },
+                        new
+                        {
+                            SeriId = 10,
+                            Description = "Cấp cho xe của doanh nghiệp, Ban quản lý dự án thuộc doanh nghiệp, các tổ chức xã hội, xã hội – nghề nghiệp, xe của đơn vị sự nghiệp ngoài công lập, xe của Trung tâm đào tạo sát hạch lái xe công lập, xe của cá nhân",
+                            Title = "J"
+                        },
+                        new
+                        {
+                            SeriId = 11,
+                            Description = "Cấp cho xe của doanh nghiệp, Ban quản lý dự án thuộc doanh nghiệp, các tổ chức xã hội, xã hội – nghề nghiệp, xe của đơn vị sự nghiệp ngoài công lập, xe của Trung tâm đào tạo sát hạch lái xe công lập, xe của cá nhân",
+                            Title = "K"
+                        },
+                        new
+                        {
+                            SeriId = 12,
+                            Description = "Cấp cho xe của doanh nghiệp, Ban quản lý dự án thuộc doanh nghiệp, các tổ chức xã hội, xã hội – nghề nghiệp, xe của đơn vị sự nghiệp ngoài công lập, xe của Trung tâm đào tạo sát hạch lái xe công lập, xe của cá nhân",
+                            Title = "L"
+                        },
+                        new
+                        {
+                            SeriId = 13,
+                            Description = "Cấp cho xe của doanh nghiệp, Ban quản lý dự án thuộc doanh nghiệp, các tổ chức xã hội, xã hội – nghề nghiệp, xe của đơn vị sự nghiệp ngoài công lập, xe của Trung tâm đào tạo sát hạch lái xe công lập, xe của cá nhân",
+                            Title = "M"
+                        },
+                        new
+                        {
+                            SeriId = 14,
+                            Description = "Cấp cho xe của doanh nghiệp, Ban quản lý dự án thuộc doanh nghiệp, các tổ chức xã hội, xã hội – nghề nghiệp, xe của đơn vị sự nghiệp ngoài công lập, xe của Trung tâm đào tạo sát hạch lái xe công lập, xe của cá nhân",
+                            Title = "N"
+                        },
+                        new
+                        {
+                            SeriId = 15,
+                            Description = "Cấp cho xe của doanh nghiệp, Ban quản lý dự án thuộc doanh nghiệp, các tổ chức xã hội, xã hội – nghề nghiệp, xe của đơn vị sự nghiệp ngoài công lập, xe của Trung tâm đào tạo sát hạch lái xe công lập, xe của cá nhân",
+                            Title = "O"
+                        },
+                        new
+                        {
+                            SeriId = 16,
+                            Description = "Cấp cho xe của doanh nghiệp, Ban quản lý dự án thuộc doanh nghiệp, các tổ chức xã hội, xã hội – nghề nghiệp, xe của đơn vị sự nghiệp ngoài công lập, xe của Trung tâm đào tạo sát hạch lái xe công lập, xe của cá nhân",
+                            Title = "P"
+                        },
+                        new
+                        {
+                            SeriId = 17,
+                            Description = "Cấp cho xe của doanh nghiệp, Ban quản lý dự án thuộc doanh nghiệp, các tổ chức xã hội, xã hội – nghề nghiệp, xe của đơn vị sự nghiệp ngoài công lập, xe của Trung tâm đào tạo sát hạch lái xe công lập, xe của cá nhân",
+                            Title = "Q"
+                        },
+                        new
+                        {
+                            SeriId = 18,
+                            Description = "Cấp cho xe của doanh nghiệp, Ban quản lý dự án thuộc doanh nghiệp, các tổ chức xã hội, xã hội – nghề nghiệp, xe của đơn vị sự nghiệp ngoài công lập, xe của Trung tâm đào tạo sát hạch lái xe công lập, xe của cá nhân",
+                            Title = "R"
+                        },
+                        new
+                        {
+                            SeriId = 19,
+                            Description = "Cấp cho xe của doanh nghiệp, Ban quản lý dự án thuộc doanh nghiệp, các tổ chức xã hội, xã hội – nghề nghiệp, xe của đơn vị sự nghiệp ngoài công lập, xe của Trung tâm đào tạo sát hạch lái xe công lập, xe của cá nhân",
+                            Title = "S"
+                        },
+                        new
+                        {
+                            SeriId = 20,
+                            Description = "Cấp cho xe của doanh nghiệp, Ban quản lý dự án thuộc doanh nghiệp, các tổ chức xã hội, xã hội – nghề nghiệp, xe của đơn vị sự nghiệp ngoài công lập, xe của Trung tâm đào tạo sát hạch lái xe công lập, xe của cá nhân",
+                            Title = "T"
+                        },
+                        new
+                        {
+                            SeriId = 21,
+                            Description = "Cấp cho xe của doanh nghiệp, Ban quản lý dự án thuộc doanh nghiệp, các tổ chức xã hội, xã hội – nghề nghiệp, xe của đơn vị sự nghiệp ngoài công lập, xe của Trung tâm đào tạo sát hạch lái xe công lập, xe của cá nhân",
+                            Title = "U"
+                        },
+                        new
+                        {
+                            SeriId = 22,
+                            Description = "Cấp cho xe của doanh nghiệp, Ban quản lý dự án thuộc doanh nghiệp, các tổ chức xã hội, xã hội – nghề nghiệp, xe của đơn vị sự nghiệp ngoài công lập, xe của Trung tâm đào tạo sát hạch lái xe công lập, xe của cá nhân",
+                            Title = "V"
+                        },
+                        new
+                        {
+                            SeriId = 23,
+                            Description = "Cấp cho xe của doanh nghiệp, Ban quản lý dự án thuộc doanh nghiệp, các tổ chức xã hội, xã hội – nghề nghiệp, xe của đơn vị sự nghiệp ngoài công lập, xe của Trung tâm đào tạo sát hạch lái xe công lập, xe của cá nhân",
+                            Title = "W"
+                        },
+                        new
+                        {
+                            SeriId = 24,
+                            Description = "Cấp cho xe của doanh nghiệp, Ban quản lý dự án thuộc doanh nghiệp, các tổ chức xã hội, xã hội – nghề nghiệp, xe của đơn vị sự nghiệp ngoài công lập, xe của Trung tâm đào tạo sát hạch lái xe công lập, xe của cá nhân",
+                            Title = "X"
+                        },
+                        new
+                        {
+                            SeriId = 25,
+                            Description = "Cấp cho xe của doanh nghiệp, Ban quản lý dự án thuộc doanh nghiệp, các tổ chức xã hội, xã hội – nghề nghiệp, xe của đơn vị sự nghiệp ngoài công lập, xe của Trung tâm đào tạo sát hạch lái xe công lập, xe của cá nhân",
+                            Title = "Y"
+                        },
+                        new
+                        {
+                            SeriId = 26,
+                            Description = "Cấp cho xe của doanh nghiệp, Ban quản lý dự án thuộc doanh nghiệp, các tổ chức xã hội, xã hội – nghề nghiệp, xe của đơn vị sự nghiệp ngoài công lập, xe của Trung tâm đào tạo sát hạch lái xe công lập, xe của cá nhân",
+                            Title = "Z"
                         });
                 });
 
@@ -336,14 +835,14 @@ namespace DataAccess.Migrations
                         new
                         {
                             Id = new Guid("b8fd818f-63f1-49ee-bec5-f7b66cafbfca"),
-                            ConcurrencyStamp = "6cfb8e70-063d-4557-8eb3-ac55d33032cc",
+                            ConcurrencyStamp = "0cf92d6a-955b-4ec0-9946-a9f0f4a1df0d",
                             Name = "Admin",
                             NormalizedName = "ADMIN"
                         },
                         new
                         {
                             Id = new Guid("d2d63c5b-d09b-4828-8322-f18ba103fe86"),
-                            ConcurrencyStamp = "e81a178c-fa47-4380-a953-db8fdd7243fb",
+                            ConcurrencyStamp = "883c353c-6647-412e-b6c8-107ecac68581",
                             Name = "User",
                             NormalizedName = "USER"
                         });
@@ -440,12 +939,12 @@ namespace DataAccess.Migrations
                         },
                         new
                         {
-                            UserId = new Guid("34fb159a-6b96-4149-a3b4-5d1b5cc374a3"),
+                            UserId = new Guid("34dd158a-6b96-4149-a3b4-5d1b5cc374a3"),
                             RoleId = new Guid("d2d63c5b-d09b-4828-8322-f18ba103fe86")
                         },
                         new
                         {
-                            UserId = new Guid("34dd158a-6b96-4149-a3b4-5d1b5cc374a3"),
+                            UserId = new Guid("48da158a-6b96-4149-a3b4-5d1b5cc374a3"),
                             RoleId = new Guid("d2d63c5b-d09b-4828-8322-f18ba103fe86")
                         });
                 });

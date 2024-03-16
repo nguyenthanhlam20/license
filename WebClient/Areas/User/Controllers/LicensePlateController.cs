@@ -1,4 +1,5 @@
 ﻿using Core.Constants;
+using Core.Helpers;
 using DataAccess.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -6,6 +7,8 @@ using ViewModels;
 using ViewModels.Districts;
 using ViewModels.LicensePlates;
 using ViewModels.Series;
+using WebClient.Helpers;
+using WebClient.Models;
 using WebClient.Services;
 
 namespace WebClient.Areas.User.Controllers
@@ -49,7 +52,11 @@ namespace WebClient.Areas.User.Controllers
         [HttpGet]
         public async Task<IActionResult> Congrats()
         {
-            return View();
+            UserInfo userInfo = SessionHelper.GetObject<UserInfo>(HttpContext.Session, "UserInfo");
+
+            LicensePlateVM response = await _clientService.Get<LicensePlateVM>($"{ApiPaths.User}/LicensePlate/GetCurrent?email={userInfo.Email}");
+
+            return View(response);
         }
 
         [HttpPost]
@@ -57,19 +64,23 @@ namespace WebClient.Areas.User.Controllers
         {
             try
             {
-                ResponseVM response = await _clientService.Post<ResponseVM>(ApiPaths.LicensePlate + "/AddLicensePlate", licensePlateVM);
-             
-                
-                if(response == null)
+                UserInfo userInfo = SessionHelper.GetObject<UserInfo>(HttpContext.Session, "UserInfo");
+                licensePlateVM.Id = userInfo.UserId;
+                licensePlateVM.CreatedDate = DateTime.Now;
+                PropertyLogger.LogAllProperties(licensePlateVM);
+                ResponseVM response = await _clientService.Post<ResponseVM>(ApiPaths.User + "/LicensePlate/AddLicensePlate", licensePlateVM);
+
+
+                if (response == null)
                 {
-                    throw new Exception("Cannot get response value");
+                    throw new Exception("Lỗi api");
                 }
 
-                if(response.Status)
+                if (response.Status)
                 {
                     return RedirectToAction(nameof(Congrats));
                 }
-                
+
             }
             catch (Exception e)
             {

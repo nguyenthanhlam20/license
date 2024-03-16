@@ -11,6 +11,8 @@ using Core.Helpers;
 using WebClient.Helpers;
 using ViewModels.Accounts;
 using WebClient;
+using ViewModels.LicensePlates;
+using WebClient.Models;
 using ViewModels;
 
 namespace WebClient.Areas.Admin.Controllers
@@ -166,7 +168,9 @@ namespace WebClient.Areas.Admin.Controllers
              
 
                 AccountVM? account = await _clientService.Get<AccountVM>($"{ApiPaths.Admin}/Account/GetAccountByEmail?email={email}");
+                List<LicensePlateVM> licensePlates = await _clientService.Get<List<LicensePlateVM>>($"{ApiPaths.Admin}/LicensePlate/GetLicensePlates?email={email}");
 
+                ViewData["LicensePlates"] = licensePlates;
                 if (account == null)
                 {
                     throw new Exception($"User with '{email}' doesn't exist.");

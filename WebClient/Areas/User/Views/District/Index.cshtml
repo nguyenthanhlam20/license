@@ -27,14 +27,12 @@
                     {
                         <div class="col mb-4">
                             <div class="card p-3" title="@item.Name" data-bs-toggle="tooltip" data-bs-placement="top">
-                                <a asp-controller="District" asp-action="Details" asp-route-districtId="@item.DistrictId">
-                                    <div class="d-flex flex-column justify-content-center align-items-center text-overflow text-center">
-                                        <img width="40" height="40" src="/assets/icons/location.png"  />
-                                        <h6 class="club-name fs-15 mt-3 fw-bold title">@item.Name</h6>
-                                        <h6 class="fs-14 ">@item.Prefix</h6>
-                                        <h6 class="fs-14"></h6>
-                                    </div>
-                                </a>
+                                <div class="d-flex flex-column justify-content-center align-items-center text-overflow text-center">
+                                    <img width="40" height="40" src="/assets/icons/location.png" />
+                                    <h6 class="club-name fs-15 mt-3 fw-bold title">@item.Name</h6>
+                                    <h6 class="fs-14 ">@item.Prefix</h6>
+                                    <h6 class="fs-14"></h6>
+                                </div>
                             </div>
                         </div>
                     }

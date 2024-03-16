@@ -60,8 +60,13 @@
                     </li><!-- End Events Nav -->
 
                     <li class="nav-item ">
-                        <a asp-area="User" asp-controller="LicensePlate" asp-action="Index" class="nav-link @(currentController.Contains("LicensePlate") ? "active" : "")">
+                        <a asp-area="User" asp-controller="LicensePlate" asp-action="Index" class="nav-link @(currentController.Contains("LicensePlate") && currentController !="MyLicensePlate" ? "active" : "")">
                             Bấm biển số
+                        </a>
+                    </li><!-- End Events Nav -->
+                    <li class="nav-item ">
+                        <a asp-area="User" asp-controller="MyLicensePlate" asp-action="Index" class="nav-link @(currentController =="MyLicensePlate" ? "active" : "")">
+                            Biển số của tôi
                         </a>
                     </li><!-- End Events Nav -->
                 </ul>
@@ -85,8 +90,13 @@
                     </li><!-- End Events Nav -->
 
                     <li class="nav-item ">
-                        <a asp-area="User" asp-controller="LicensePlate" asp-action="Index" class="nav-link @(currentController.Contains("LicensePlate") ? "active" : "")">
+                        <a asp-area="User" asp-controller="LicensePlate" asp-action="Index" class="nav-link @(currentController.Contains("LicensePlate") && currentController !="MyLicensePlate" ? "active" : "")">
                             Bấm biển số
+                        </a>
+                    </li><!-- End Events Nav -->
+                    <li class="nav-item ">
+                        <a asp-area="User" asp-controller="MyLicensePlate" asp-action="Index" class="nav-link @(currentController == "MyLicensePlate"? "active" : "")">
+                            Biển số của tôi
                         </a>
                     </li><!-- End Events Nav -->
                 </ul><!-- End Profile Dropdown Items -->

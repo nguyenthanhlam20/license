@@ -73,20 +73,15 @@ namespace WebApi.Controllers.Admin
         {
             try
             {
-                if (seriVM == null)
-                {
-                    throw new Exception("Didn't recieved seri information");
-                }
-
                 var seri = _mapper.Map<Seri>(seriVM);
 
                 bool status = await _repository.UpdateSeri(seri);
                 if (!status)
                 {
-                    throw new Exception("Update seri failed!");
+                    throw new Exception("Cập nhật số seri thất bại.");
                 }
 
-                return Ok(new ResponseVM() { Status = true, Message = "Update seri successful!" });
+                return Ok(new ResponseVM() { Status = true, Message = "Cập nhật số seri thành công." });
             }
             catch (Exception ex)
             {
@@ -99,20 +94,15 @@ namespace WebApi.Controllers.Admin
         {
             try
             {
-                if (seriVM == null)
-                {
-                    throw new Exception("Didn't recieved seri information");
-                }
-                // check exist campus
                 var seri = _mapper.Map<Seri>(seriVM);
              
                 bool status = await _repository.AddSeri(seri);
                 if (!status)
                 {
-                    throw new Exception("Add seri failed!");
+                    throw new Exception("Thêm số seri thất bại.");
                 }
 
-                return Ok(new ResponseVM() { Status = true, Message = "Add seri successful!" });
+                return Ok(new ResponseVM() { Status = true, Message = "Thêm số seri thành công." });
             }
             catch (Exception ex)
             {

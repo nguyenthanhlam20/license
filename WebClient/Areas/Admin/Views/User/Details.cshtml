@@ -1,10 +1,13 @@
 ﻿@using ViewModels.Accounts
 @using ViewModels.Paging
+@using ViewModels.LicensePlates
 @using ViewModels
 @using DataAccess.Models;
 @using WebClient.Helpers
 @model AccountVM
-
+@{
+    List<LicensePlateVM> items = ViewData["LicensePlates"] as List<LicensePlateVM>;
+}
 
 <div class="pagetitle">
     <h1>Thông tin người dùng</h1>
@@ -55,6 +58,23 @@
 
                 </form>
 
+            </div>
+            <div class="card p-3">
+                <h6 class="mb-3 fw-bold">Danh sách biển số</h6>
+                @if (items != null && items?.Count > 0)
+                {
+                    <div class="row d-flex flex-row justify-content-center mb-lg-5 row-cols-1 row-cols-sm-2 row-cols-md-3">
+                        @foreach (LicensePlateVM item in items)
+                        {
+                            <div class="col mb-4">
+                                <div class="container mb-2 d-flex flex-column align-items-center">
+                                    <h6>Ngày bấm: @item.CreatedDate.ToShortDateString()</h6>
+                                    <div type="text" name="licenseplate" class="licenseplate">@item?.LicensePlateNumber</div>
+                                </div>
+                            </div>
+                        }
+                    </div>
+                }
             </div>
         </div>
     </div>

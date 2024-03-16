@@ -1,0 +1,30 @@
+﻿@using ViewModels.Paging
+@using ViewModels.LicensePlates
+@model List<LicensePlateVM>
+<div class="pagetitle">
+    <h1>Danh sách biển số của tôi</h1>
+</div><!-- End Page Title -->
+<div class="row">
+    <div class="col-sm-12  m-auto">
+        <div class="section-content mt-4">
+            @if (Model != null && Model?.Count > 0)
+            {
+                <div class="row d-flex flex-row justify-content-center mb-lg-5 row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 ">
+                    @foreach (LicensePlateVM item in Model)
+                    {
+                        <div class="col mb-4">
+                            <div class="container mb-2 d-flex flex-column align-items-center">
+                                <h6>Ngày bấm: @item.CreatedDate.ToShortDateString()</h6>
+                                <div type="text" name="licenseplate" class="licenseplate">@item?.LicensePlateNumber</div>
+                            </div>
+                        </div>
+                    }
+                </div>
+            }
+            else
+            {
+                <h6 class="fw-bold">Không tìm thấy biển số nào.</h6>
+            }
+        </div>
+    </div>
+</div>

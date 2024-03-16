@@ -2,10 +2,9 @@
 using DataAccess.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using ViewModels;
+using Repositories.LicensePlates;
 using ViewModels.LicensePlates;
 using ViewModels.Paging;
-using Repositories.LicensePlates;
 
 namespace WebApi.Controllers.Admin
 {
@@ -16,13 +15,28 @@ namespace WebApi.Controllers.Admin
     {
         private ILicensePlateRepository _repository;
         private readonly IMapper _mapper;
+        private readonly ILicensePlateRepository _licensePlateRepository;
 
-        public LicensePlateController(ILicensePlateRepository repository, IMapper mapper)
+        public LicensePlateController(ILicensePlateRepository repository,
+                        ILicensePlateRepository licensePlateRepository,
+
+            IMapper mapper)
         {
             _repository = repository;
             _mapper = mapper;
+            _licensePlateRepository = licensePlateRepository;
+
         }
 
+
+        [HttpGet]
+        public async Task<IActionResult> GetLicensePlates([FromQuery] string email)
+        {
+            List<LicensePlate> licensePlates = await _licensePlateRepository.GetLicensePlates(email);
+
+            List<LicensePlateVM> vms = _mapper.Map<List<LicensePlateVM>>(licensePlates);
+            return Ok(vms);
+        }
 
         [HttpPost]
         public async Task<IActionResult> GetLicensePlates(LicensePlatePagingRequest request)
@@ -67,39 +81,5 @@ namespace WebApi.Controllers.Admin
                 return NotFound();
             }
         }
-
-        [HttpPut]
-        public async Task<IActionResult> UpdateLicensePlate([FromBody] LicensePlateVM licensePlateVM)
-        {
-            try
-            {
-                if (licensePlateVM == null)
-                {
-                    throw new Exception("Didn't recieved licensePlate information");
-                }
-
-                bool isExisted = await _repository.IsExistedLicensePlate(licensePlateVM.LicensePlateId ?? 0, licensePlateVM.LicensePlateNumber);
-                if (isExisted)
-                {
-                    throw new Exception($"LicensePlate with the name '{licensePlateVM.LicensePlateNumber}' existed!");
-                }
-
-                var licensePlate = _mapper.Map<LicensePlate>(licensePlateVM);
-
-                bool status = await _repository.UpdateLicensePlate(licensePlate);
-                if (!status)
-                {
-                    throw new Exception("Update licensePlate failed!");
-                }
-
-                return Ok(new ResponseVM() { Status = true, Message = "Update licensePlate successful!" });
-            }
-            catch (Exception ex)
-            {
-                return Ok(new ResponseVM() { Status = false, Message = ex.Message });
-            }
-        }
-
-      
     }
 }

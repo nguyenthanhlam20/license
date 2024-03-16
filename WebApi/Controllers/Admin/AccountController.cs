@@ -10,6 +10,9 @@ using DataAccess.Models;
 using Core.Constants;
 using WebApi.Services;
 using Humanizer;
+using NuGet.Protocol.Core.Types;
+using ViewModels.LicensePlates;
+using Repositories.LicensePlates;
 
 namespace WebApi.Controllers.Admin
 {
@@ -22,7 +25,8 @@ namespace WebApi.Controllers.Admin
         private readonly IMapper _mapper;
         private readonly IEmailService _emailService;
 
-        public AccountController(IAccountRepository accountRepository, IMapper mapper, IEmailService emailService)
+        public AccountController(IAccountRepository accountRepository,
+                 IMapper mapper, IEmailService emailService)
         {
             _accountRepository = accountRepository;
             _mapper = mapper;
@@ -43,6 +47,7 @@ namespace WebApi.Controllers.Admin
             AccountVM account = await _accountRepository.GetAccountByEmail(email);
             return Ok(account);
         }
+
 
         [HttpPost]
         public async Task<IActionResult> CreateAccountManual([FromBody] AccountVM request)
@@ -84,7 +89,7 @@ namespace WebApi.Controllers.Admin
                     await _emailService.SendHtmlEmailAsync(request.Email, Subject, Body);
 
 
-                    response.Message = "Create student successful";
+                    response.Message = "Tạo mới tài khoản thành công";
                 }
 
                 return Ok(response);

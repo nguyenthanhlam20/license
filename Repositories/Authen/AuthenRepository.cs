@@ -73,7 +73,7 @@ namespace Repositories.Authen
                 }
                 else
                 {
-                    throw new Exception("Please check your email or password");
+                    throw new Exception("Kiểm tra lại tài khoản mật khẩu của bạn.");
                 }
             }
             catch (Exception ex)

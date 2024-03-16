@@ -8,6 +8,9 @@ using WebApi.Services;
 using DataAccess.Models;
 using ViewModels.LicensePlates;
 using ViewModels;
+using Repositories.Districts;
+using Repositories.Series;
+using System.Collections.Generic;
 
 namespace WebApi.Controllers.User
 {
@@ -17,19 +20,38 @@ namespace WebApi.Controllers.User
     public class LicensePlateController : ControllerBase
     {
         private readonly ILicensePlateRepository _repository;
+        private readonly IDistrictRepository _districtRepository;
+        private readonly ISeriRepository _seriRepository;
         private readonly IMapper _mapper;
 
-        public LicensePlateController(ILicensePlateRepository repository, IMapper mapper)
+        public LicensePlateController(ILicensePlateRepository repository,
+            IDistrictRepository districtRepository,
+            ISeriRepository seriRepository,
+            IMapper mapper)
         {
             _repository = repository;
             _mapper = mapper;
+            _districtRepository = districtRepository;
+            _seriRepository = seriRepository;
         }
 
         [HttpGet]
         public async Task<IActionResult> GetLicensePlates([FromQuery] string email)
         {
-            List<LicensePlate> account = await _repository.GetLicensePlates(email);
-            return Ok(account);
+            List<LicensePlate> licensePlates = await _repository.GetLicensePlates(email);
+
+            List<LicensePlateVM> vms = _mapper.Map<List<LicensePlateVM>>(licensePlates);
+            return Ok(vms);
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> GetCurrent([FromQuery] string email)
+        {
+
+            List<LicensePlate> licensePlates = await _repository.GetLicensePlates(email);
+
+            LicensePlateVM licensePlateVM = _mapper.Map<LicensePlateVM>(licensePlates.LastOrDefault());
+            return Ok(licensePlateVM);
         }
 
         [HttpPost]
@@ -38,7 +60,14 @@ namespace WebApi.Controllers.User
             try
             {
                 var licensePlate = _mapper.Map<LicensePlate>(licensePlateVM);
-                licensePlate.Number = await _repository.GetAvailableNumber(licensePlate);
+                int number = await _repository.GetAvailableNumber(licensePlate);
+                licensePlate.Number = number;
+
+                District district = await _districtRepository.GetDistrictById(licensePlate.DistrictId);
+                Seri seri = await _seriRepository.GetSeriById(licensePlate.SeriesId);
+
+                licensePlate.LicensePlateNumber = $"{district.Prefix}{seri.Title} - {number / 100}.{number % 100}";
+                Console.WriteLine(licensePlate.LicensePlateNumber);
 
                 bool status = await _repository.AddLicensePlate(licensePlate);
                 if (!status)

@@ -229,7 +229,7 @@ namespace Repositories.Accounts
                 // Check if the update was successful
                 if (result.Succeeded)
                 {
-                    return new ResponseVM() { Status = true, Message = "Update account successful" };
+                    return new ResponseVM() { Status = true, Message = "Cập nhật thông tin thành công" };
 
                 }
                 else

@@ -62,8 +62,8 @@ namespace WebClient.Controllers
                     {
                         throw new Exception(response.Message);
                     }
-                    ToastHelper.ShowSuccess(TempData, "Register successful");
-                    ToastHelper.ShowSuccess(TempData, "Password has been sent to your email");
+                    ToastHelper.ShowSuccess(TempData, "Đăng ký tài khoản thành công.");
+                    ToastHelper.ShowSuccess(TempData, "Mật khẩu đã được gửi về email của bạn.");
                     return RedirectToAction(nameof(SignIn));
                 }
             }
@@ -107,7 +107,7 @@ namespace WebClient.Controllers
                     }
 
                     // Show a success message
-                    ToastHelper.ShowSuccess(TempData, "Login successful!");
+                    ToastHelper.ShowSuccess(TempData, "Đăng nhập thành công");
 
                     UserInfo userInfo = new UserInfo();
                     // Store user information in the UserService
